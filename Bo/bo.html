@@ -15,17 +15,32 @@
 	
 		<div id = "socialpanel" class = "socialpanel">
 			<table class = "socialtable">
-				<tr> <div id = "facebook" class = "button">
+				<tr> <div id = "facebook" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
 					<img class = "socialbutton" src = "http://i.imgur.com/QjSn4bF.png">
 				</div></tr>
-				<tr> <div id = "twitter" class = "button">
+				<tr> <div id = "twitter" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
 					<img class = "socialbutton" src = "http://i.imgur.com/6tGooTU.png">
 				</div></tr>
-				<tr> <div id = "gmail" class = "button">
+				<tr> <div id = "gmail" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
 					<img class = "socialbutton" src = "http://i.imgur.com/sHhxqjW.png">
 				</div></tr>
 			</table>
 		</div>
+			
+		<div id = "socialdispanel" class = "socialpanel">
+			<table class = "socialtable">
+				<tr> <div id = "facebookdis" class = "buttondis">
+					<p class = "socialbuttondis">Send me a Facebook Message</p>
+				</div></tr>
+				<tr> <div id = "twitterdis" class = "buttondis">
+					<p class = "socialbuttondis">Tweet at me</p>
+				</div></tr>
+				<tr> <div id = "gmaildis" class = "buttondis">
+					<p class = "socialbuttondis">Send me an e-mail</p>
+				</div></tr>
+			</table>
+		</div>
+		
 		<div id = "page1" class = "page1">
 			<div id = "title" class = "title">Bo</div>
 			<div id = "menu" class = "menu">

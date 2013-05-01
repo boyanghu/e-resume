@@ -108,25 +108,58 @@ body:hover{
 }
 
 .socialpanel{
-	width:40px;
 	height: 50%;
 	margin-top:10%;
-	background-color: rgba(46,46,46,1);
 	position: fixed;
-	right:0;
+	size:fixed;
+	
 }
+
+#socialpanel{
+	width:40px;
+	background-color: rgba(46,46,46,1);
+	right:0;
+	z-index:1000;
+}
+
+#socialdispanel{
+	width: 340px;
+	right: 45px;
+}
+
 
 .socialbutton{
 	margin-left: 8px;
 	margin-top: 8px;
 }
 
+.socialbuttondis{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 15px;
+	color: rgba(46,46,46,1);
+}
+
 .button{
 	height: 40px;
 }
 
+.buttondis{
+	opacity:0;
+	height:40px;
+	text-align: center;
+	line-height:40px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
 
 #facebook{
+
+	background-color: rgba(0,197,205,1);
+}
+
+#facebookdis{
+
 	background-color: rgba(0,197,205,1);
 }
 
@@ -134,7 +167,15 @@ body:hover{
 	background-color: rgba(238,106,80,1);
 }
 
+#twitterdis{
+	background-color: rgba(238,106,80,1);
+}
+
 #gmail{
+	background-color: rgba(137,104,205,1);
+}
+
+#gmaildis{
 	background-color: rgba(137,104,205,1);
 }
 
