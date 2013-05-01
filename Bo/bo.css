@@ -123,8 +123,10 @@ body:hover{
 }
 
 #socialdispanel{
+	visibility: collapse;
 	width: 340px;
 	right: 45px;
+	z-index:20;
 }
 
 
