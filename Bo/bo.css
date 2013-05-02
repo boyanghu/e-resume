@@ -25,7 +25,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-image: url("http://i.imgur.com/qvNLgbg.jpg");
+	background-image: url("img/m5.jpg");
+	background-attachment:fixed;
 	background-size: cover;
     background-repeat: no-repeat;
 	
@@ -228,9 +229,86 @@ body:hover{
 	
 }
 
+#facebookpanel{
+	visibility:collapse;
+	width: 0%;
+	background-color: rgba(0,197,205,1);
+	z-index:1000;
+	right: 45px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
 
+#fbcloser{
+	float: right;
+	margin-top: 12px;
+	margin-right: 12px;
+	font-family: 'Limelight', cursive;
+	font-size: 35px;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
 
+#fbcloser:hover{
+		border-bottom: 1px solid rgba(0,0,0,1);
+}
 
+#twitterpanel{
+	visibility:collapse;
+	width: 0%;
+	background-color: rgba(238,106,80,1);
+	z-index:1000;
+	right: 45px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+#tcloser{
+	float: right;
+	margin-top: 12px;
+	margin-right: 12px;
+	font-family: 'Limelight', cursive;
+	font-size: 35px;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+#tcloser:hover{
+		border-bottom: 1px solid rgba(0,0,0,1);
+}
+
+#mailpanel{
+	visibility:collapse;
+	width: 0%;
+	background-color: rgba(137,104,205,1);
+	z-index:1000;
+	right: 45px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+#mcloser{
+	float: right;
+	margin-top: 12px;
+	margin-right: 12px;
+	font-family: 'Limelight', cursive;
+	font-size: 35px;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+#mcloser:hover{
+		border-bottom: 1px solid rgba(0,0,0,1);
+}
 
 
 

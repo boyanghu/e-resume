@@ -11,18 +11,17 @@
 		<link rel="shortcut icon" href="/favicon.png" type="image/png">
 		<link rel="shortcut icon" type="image/png" href="http://i.imgur.com/kXZlDTH.png" />
 	</head>
-	<body bgproperties="fixed">
-	
+	<body>
 		<div id = "socialpanel" class = "socialpanel">
 			<table class = "socialtable">
-				<tr> <div id = "facebook" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
-					<img class = "socialbutton" src = "http://i.imgur.com/QjSn4bF.png">
+				<tr> <div id = "facebook" onclick = "facebookOnClick()" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
+					<img class = "socialbutton" src = "img/facebook.png">
 				</div></tr>
-				<tr> <div id = "twitter" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
-					<img class = "socialbutton" src = "http://i.imgur.com/6tGooTU.png">
+				<tr> <div id = "twitter" onclick = "twitterOnClick()" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
+					<img class = "socialbutton" src = "img/twitter.png">
 				</div></tr>
-				<tr> <div id = "gmail" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
-					<img class = "socialbutton" src = "http://i.imgur.com/sHhxqjW.png">
+				<tr> <div id = "gmail" onclick = "mailOnClick()" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
+					<img class = "socialbutton" src = "img/mail.png">
 				</div></tr>
 			</table>
 		</div>
@@ -30,7 +29,7 @@
 		<div id = "socialdispanel" class = "socialpanel">
 			<table class = "socialtable">
 				<tr> <div id = "facebookdis" class = "buttondis">
-					<p class = "socialbuttondis">Send me a Facebook Message</p>
+					<p class = "socialbuttondis">Hit me up on Facebook</p>
 				</div></tr>
 				<tr> <div id = "twitterdis" class = "buttondis">
 					<p class = "socialbuttondis">Tweet at me</p>
@@ -39,6 +38,19 @@
 					<p class = "socialbuttondis">Send me an e-mail</p>
 				</div></tr>
 			</table>
+		</div>
+		
+		<div id = "facebookpanel" class = "socialpanel">
+			<p id = "fbcloser" onclick = "fpcloserOnClick()">X<p>
+			<iframe id = "fbframe" src="http://www.facebook.com"></iframe>
+		</div>
+		
+		<div id = "twitterpanel" class = "socialpanel">
+			<p id = "tcloser" onclick = "tcloserOnClick()">X<p>
+		</div>
+		
+		<div id = "mailpanel" class = "socialpanel">
+			<p id = "mcloser" onclick = "mcloserOnClick()">X<p>
 		</div>
 		
 		<div id = "page1" class = "page1">
