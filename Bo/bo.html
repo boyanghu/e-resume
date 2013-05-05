@@ -41,7 +41,7 @@
 		</div>
 		
 		<div id = "facebookpanel" class = "socialpanel">
-			<p id = "fbcloser" onclick = "fpcloserOnClick()">X<p>
+			<p id = "fbcloser" onclick = "fbcloserOnClick()">X<p>
 			<iframe id = "fbframe" src="http://www.facebook.com"></iframe>
 		</div>
 		
@@ -51,6 +51,20 @@
 		
 		<div id = "mailpanel" class = "socialpanel">
 			<p id = "mcloser" onclick = "mcloserOnClick()">X<p>
+			<form id = "mailform" action = "mail.php">
+				<div id = "frommail">
+					<p id = "from" class = "heading">From:</p>
+					
+					<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
+					<div id = "email"><input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail"></input></div>
+				</div>
+				<div id = "messagemail">
+					<p id = "message" class = "heading">Message:</p>
+					<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
+				</div>
+				<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
+			</form>
+			
 		</div>
 		
 		<div id = "page1" class = "page1">
