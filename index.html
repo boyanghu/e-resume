@@ -8,7 +8,8 @@
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/favicon.png" type="image/png">
 		<link rel="shortcut icon" type="image/png" href="http://i.imgur.com/HNRr61Q.png" />
-		
+		<script src="Bo/jquery-1.9.1.min.js"></script>
+		<!-- install jQuery from Google-->
 		<title>Kim and Bo</title>
 		<!-- CSS Files -->
 		<link type="text/css" rel="stylesheet" href="MainPage.css">
@@ -16,24 +17,23 @@
 		<script type="text/javascript" src="MainPage.js"></script>
 	</head>
 	<body>
-		<div id ="filter" class = "filter"></div>
-		<div id = "main" align = "center" style = "width: 100%; height: 100%; overflow: hidden; position: relative;" >
+		<div id = "main" align = "center" style = "width: 100%; height: 100%; overflow: auto; position: relative;" >
 			<div class= "title" >
 				<p class = "maintitle"> Kim & Bo</p>
 				<p class = "aboutus"> About Us</p>
 			</div>
-			<table class = "maintable">
-				<tr>
-					<td>
-						<div  id = "kim" class = "kim">
-						</div>
-					</td>
-					<td>
-					<div  id = "bo" class = "bo" onclick = "location.href='Bo/bo.html'">
-						</div>
-					</td>
-				</tr>
-			</table>
+			<div  id = "kim" class = "circle"
+			onmouseover = "circleover('kim')" onmouseout = "circleout('kim')">
+				<p id = "kimname" class = "name">Kimberley Chen</p>
+				<img src = "female.png" id = "kimimg" class = "img">
+				<p id = "kimdis" class = "dis">Statistician<p>
+			</div>
+			<div  id = "bo" class = "circle" onclick = "location.href='Bo/bo.html'"
+			onmouseover = "circleover('bo')" onmouseout = "circleout('bo')">
+				<p id = "boname" class = "name">Bo Yang Hu</p>
+				<img src = "male.png" id = "boimg" class = "img">
+				<p id = "bodis" class = "dis">Software Engineer<p>
+			</div>
 		</div>
 
 	</body>

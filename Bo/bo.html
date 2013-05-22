@@ -4,25 +4,25 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 		<title>Bo Yang Hu</title>
-		<link type="text/css" rel="stylesheet" href="bo.css">
+		<link type="text/css" rel="stylesheet" href="botest.css">
 		<script type="text/javascript" src="bo.js"></script>
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/favicon.png" type="image/png">
 		<link rel="shortcut icon" type="image/png" href="http://i.imgur.com/kXZlDTH.png" />
 	</head>
-	<body bgproperties="fixed">
-	
+	<body>
 		<div id = "socialpanel" class = "socialpanel">
 			<table class = "socialtable">
-				<tr> <div id = "facebook" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
-					<img class = "socialbutton" src = "http://i.imgur.com/QjSn4bF.png">
+				<tr> <div id = "facebook" onclick = "location.href = 'https://www.facebook.com/bo.y.hu.3?ref=tn_tnmn';" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
+					<img class = "socialbutton" src = "img/facebook.png">
 				</div></tr>
-				<tr> <div id = "twitter" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
-					<img class = "socialbutton" src = "http://i.imgur.com/6tGooTU.png">
+				<tr> <div id = "twitter" onclick = "twitterOnClick()" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
+					<img class = "socialbutton" src = "img/twitter.png">
 				</div></tr>
-				<tr> <div id = "gmail" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
-					<img class = "socialbutton" src = "http://i.imgur.com/sHhxqjW.png">
+				<tr> <div id = "gmail" onclick = "mailOnClick()" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
+					<img class = "socialbutton" src = "img/mail.png">
 				</div></tr>
 			</table>
 		</div>
@@ -30,7 +30,7 @@
 		<div id = "socialdispanel" class = "socialpanel">
 			<table class = "socialtable">
 				<tr> <div id = "facebookdis" class = "buttondis">
-					<p class = "socialbuttondis">Send me a Facebook Message</p>
+					<p class = "socialbuttondis">Hit me up on Facebook</p>
 				</div></tr>
 				<tr> <div id = "twitterdis" class = "buttondis">
 					<p class = "socialbuttondis">Tweet at me</p>
@@ -41,14 +41,41 @@
 			</table>
 		</div>
 		
+		<div id = "facebookpanel" class = "socialpanel">
+			<p id = "fbcloser" onclick = "fbcloserOnClick()">X<p>
+			<iframe id = "fbframe" src="http://www.facebook.com"></iframe>
+		</div>
+		
+		<div id = "twitterpanel" class = "socialpanel">
+			<p id = "tcloser" onclick = "tcloserOnClick()">X<p>
+		</div>
+		
+		<div id = "mailpanel" class = "socialpanel">
+			<p id = "mcloser" onclick = "mcloserOnClick()">X<p>
+			<form id = "mailform" action = "mail.php">
+				<div id = "frommail">
+					<p id = "from" class = "heading">From:</p>
+					<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
+					<div id = "email"><input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail"></input></div>
+				</div>
+				<div id = "messagemail">
+					<p id = "message" class = "heading">Message:</p>
+					<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
+				</div>
+				<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
+			</form>
+		</div>
+		
 		<div id = "page1" class = "page1">
 			<div id = "title" class = "title">Bo</div>
 			<div id = "menu" class = "menu">
 				<table id = "menutable" class = "menutable">
 					<tr>
 						<td><p id = "aboutbutton" class = "menuitem" onclick = "aboutbuttonOnClick()">about</p></td>
+						<td><p id = "blogbutton" class = "menuitem">blog</p></td>
 						<td><p id = "skillsbutton" class = "menuitem">skills</p></td>
 						<td><p id = "workbutton" class = "menuitem">work</p></td>
+						
 					</tr>
 				</table>
 			</div>
@@ -60,6 +87,125 @@
 			</div>
 		</div>
 		<div id = "page2" class = "page2">
+			<div id = "skills">
+					<div id = "webdis" class = "skillsdis"><p class = "skillstxt">my web development skills</p></div>
+					<div id = "mobiledis" class = "skillsdis"><p class = "skillstxt">my mobile app development skills</p></div>
+					<div id = "otherdis" class = "skillsdis"><p class = "skillstxt">other skills</p></div>
+				<table id = "icontable" class = "skillstable">
+					<tr>
+						<td><div id = "web" class = "heading2" onmouseover = "dishover('webdis')" onmouseout = "disunhover('webdis')" onclick = "webclick()"><img id = "webimg" class = "headingimg" src = "img/code.png"></div></td>
+						<td><div id = "mobile" class = "heading2" onmouseover = "dishover('mobiledis')" onmouseout = "disunhover('mobiledis')" onclick = "mobileclick()"><img id = "mobileimg" class = "headingimg" src = "img/mobile.png"></div></td>
+						<td><div id = "other" class = "heading2" onmouseover = "dishover('otherdis')" onmouseout = "disunhover('otherdis')" onclick = "otherclick()"><img id = "otherimg" class = "headingimg" src = "img/menu.png"></div></td>
+					</tr>
+				</table>
+						
+				<div id = "webskills" >
+					<div id = "html" class = "section">
+						<div id = "htmltitle" class = "sectiontitle"><p id = "htmltxt" class = "sectiontxt">html</p></div>
+						<div id = "htmldis" class = "sectiondis">
+							<p id = "htmlabout" class = "subdis">structual html/website development</p>
+							<p id = "html1" class = "subdis">experienced in web marked languages such as html, xml</p>
+							<p id = "html2" class = "subdis">knowledge of scripting languages such as JavaScript and JQuery</p>
+							<p id = "html3" class = "subdis">understands AJAX and server side communication with PHP and SQL</p>
+						</div>
+					</div>
+					<div id = "ux" class = "section">
+						<div id = "uxtitle" class = "sectiontitle"><p id = "uxtxt" class = "sectiontxt">ux</p></div>
+						<div id = "uxdis" class = "sectiondis">
+							<p id = "uxabout" class = "subdis">user experiance and user interface AKA the look and feel</p>
+							<p id = "ux1" class = "subdis">expert in CSS and website design</p>
+							<p id = "ux2" class = "subdis">experienced in mobile web UI expectations and responsive web design</p>
+							<p id = "ux3" class = "subdis">passionate about designing the best user experience possible</p>
+						</div>
+					</div>
+					<div id = "gwt" class = "section">
+						<div id = "gwttitle" class = "sectiontitle"><p id = "gwttxt" class = "sectiontxt">gwt</p></div>
+						<div id = "gwtdis" class = "sectiondis">
+							<p id = "gwtabout" class = "subdis">Google Web Toolkit web applications</p>
+							<p id = "gwt1" class = "subdis">a Google Web Toolkit vetern</p>
+							<p id = "gwt2" class = "subdis">proficient with using Java for web apps and client server communication</p>
+							<p id = "gwt3" class = "subdis">knowlegable of data persistance using JDO </p>
+						</div>
+					</div>
+				</div>
+				<div id = "mobileskills">					
+					<div id = "android" class = "section">
+						<div id = "androidtitle" class = "sectiontitle"><img id = "androidtxt" class = "sectionimg" src = "img/android.png"></div>
+						<div id = "androiddis" class = "sectiondis">
+							<p id = "androidabout" class = "subdis">mobile application development for Google Android OS</p>
+							<p id = "android1" class = "subdis">knowlegable of Android development platform with Java and Eclipse IDE</p>
+							<p id = "android2" class = "subdis">experienced with designing with XML</p>
+							<p id = "android3" class = "subdis">uses and have played with CyanogenMod 9 (open source Android io)</p>
+						</div>
+					</div>
+					<div id = "wp8" class = "section">
+						<div id = "wp8title" class = "sectiontitle"><img id = "wptxt" class = "sectionimg" src = "img/windows8.png"></div>
+						<div id = "wpdis" class = "sectiondis">
+							<p id = "wpabout" class = "subdis">application development for Microsoft's Windows 8 and Windows Phone 8</p>
+							<p id = "wp1" class = "subdis">I've created apps using C# using Visual Studio IDE</p>
+							<p id = "wp2" class = "subdis">experienced in programming in the .NET framework</p>
+							<p id = "wp3" class = "subdis">passionate about designing the best user experience possible</p>
+						</div>
+					</div>
+					<div id = "html5" class = "section">
+						<div id = "html5title" class = "sectiontitle"><p id = "html5txt" class = "sectiontxt">5</p></div>
+						<div id = "html5dis" class = "sectiondis">
+							<p id = "html5about" class = "subdis">crossplatform app development using html5 and css</p>
+							<p id = "html51" class = "subdis">a Google Web Toolkit vetern</p>
+							<p id = "html52" class = "subdis">proficient with using Java for web apps and client server communication</p>
+							<p id = "html53" class = "subdis">knowlegable of data persistance using JDO </p>
+						</div>
+					</div>
+				</div>
+	
+				<div id = "otherskills">							
+					<div id = "systemsprogramming" class = "section">
+						<div id = "systemstitle" class = "sectiontitle"><p id = "systemstxt" class = "sectiontxt">{ }</p></div>
+						<div id = "systemsdis" class = "sectiondis">
+							<p id = "systemsabout" class = "subdis">systems development and low level/assembly languages</p>
+							<p id = "systems1" class = "subdis">knowlegable of Android development platform with Java and Eclipse IDE</p>
+							<p id = "systems2" class = "subdis">experienced with designing with XML</p>
+							<p id = "systems3" class = "subdis">uses and have played with CyanogenMod 9 (open source Android io)</p>
+						</div>
+					</div>
+					<div id = "svn" class = "section">
+						<div id = "svntitle" class = "sectiontitle"><img id = "svntxt" class = "sectionimg" src = "img/github.png"></div>
+						<div id = "svndis" class = "sectiondis">
+							<p id = "svnabout" class = "subdis">group mentality using Scrum development stuctures</p>
+							<p id = "svn1" class = "subdis">expert in CSS and website design</p>
+							<p id = "svn2" class = "subdis">experienced in mobile web UI expectations and responsive web design</p>
+							<p id = "svn3" class = "subdis">passionate about designing the best user experience possible</p>
+						</div>
+					</div>
+					<div id = "hobbies" class = "section">
+						<div id = "hobbiestitle" class = "sectiontitle"><img id = "hobbiestxt" class = "sectionimg" src = "img/hamburger.png"></div>
+						<div id = "hobbiesdis" class = "sectiondis">
+							<p id = "hobbiesabout" class = "subdis">stuff not related to computers</p>
+							<p id = "hobbies1" class = "subdis">a Google Web Toolkit vetern</p>
+							<p id = "hobbies2" class = "subdis">proficient with using Java for web apps and client server communication</p>
+							<p id = "hobbies3" class = "subdis">knowlegable of data persistance using JDO </p>
+						</div>
+					</div>
+				</div>
+				<div id = "sep1" class = "skillsendline">
+					<div class = "first"></div>
+					<div class = "second"></div>
+					<div class = "third"></div>
+					<div class = "forth"></div>
+					<div class = "fifth"></div>
+				</div>
+			</div>	
+			<div id = "experience">
+				
+			
+			
+			
+			</div>
+			<div id = "blog">
+			
+			
+			
+			</div>
 		</div>
 	</body>
 </html>
