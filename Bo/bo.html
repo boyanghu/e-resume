@@ -4,25 +4,26 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+		<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
 		<title>Bo Yang Hu</title>
 		<link type="text/css" rel="stylesheet" href="botest.css">
 		<script type="text/javascript" src="bo.js"></script>
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="/favicon.png" type="image/png">
-		<link rel="shortcut icon" type="image/png" href="http://i.imgur.com/kXZlDTH.png" />
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+		<link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
 	</head>
-	<body>
+	<body onload = "webclick('0')">
+		<div id = "background"></div>
 		<div id = "socialpanel" class = "socialpanel">
 			<table class = "socialtable">
 				<tr> <div id = "facebook" onclick = "location.href = 'https://www.facebook.com/bo.y.hu.3?ref=tn_tnmn';" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
-					<img class = "socialbutton" src = "img/facebook.png">
+					<img class = "socialbutton" src = "img/facebook.svg">
 				</div></tr>
 				<tr> <div id = "twitter" onclick = "twitterOnClick()" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
-					<img class = "socialbutton" src = "img/twitter.png">
+					<img class = "socialbutton" src = "img/linkedin.svg">
 				</div></tr>
 				<tr> <div id = "gmail" onclick = "mailOnClick()" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
-					<img class = "socialbutton" src = "img/mail.png">
+					<img class = "socialbutton" src = "img/envelope.svg">
 				</div></tr>
 			</table>
 		</div>
@@ -33,7 +34,7 @@
 					<p class = "socialbuttondis">Hit me up on Facebook</p>
 				</div></tr>
 				<tr> <div id = "twitterdis" class = "buttondis">
-					<p class = "socialbuttondis">Tweet at me</p>
+					<p class = "socialbuttondis">Check me out on LinkedIn</p>
 				</div></tr>
 				<tr> <div id = "gmaildis" class = "buttondis">
 					<p class = "socialbuttondis">Send me an e-mail</p>
@@ -69,15 +70,30 @@
 		<div id = "page1" class = "page1">
 			<div id = "title" class = "title">Bo</div>
 			<div id = "menu" class = "menu">
-				<table id = "menutable" class = "menutable">
-					<tr>
-						<td><p id = "aboutbutton" class = "menuitem" onclick = "aboutbuttonOnClick()">about</p></td>
-						<td><p id = "blogbutton" class = "menuitem">blog</p></td>
-						<td><p id = "skillsbutton" class = "menuitem">skills</p></td>
-						<td><p id = "workbutton" class = "menuitem">work</p></td>
-						
-					</tr>
-				</table>
+				<div id = "menuabout" class = "menuitem"onclick = "aboutbuttonOnClick()"> 
+					<div class ="imgholder">
+						<img class = "menuimg" src = "img/user.svg">
+					</div>
+					<p id = "aboutbutton" class = "menutxt" >about</p>
+							</div>
+				<div id = "menublog" class = "menuitem"> 
+					<div class ="imgholder">
+						<img class = "menuimg" src = "img/pencil.svg">
+					</div>
+					<p id = "blogbutton" class = "menutxt">blog</p>
+				</div>
+				<div id = "menuskills" class = "menuitem"onclick = "window.scroll(0,findPos(document.getElementById('skills')));">
+					<div class ="imgholder">
+						<img class = "menuimg" src = "img/wrench.svg">
+					</div>
+					<p class = "menutxt" id = "skillsbutton"  >skills</p>
+				</div>
+				<div id = "menuwork" class = "menuitem" onclick = "window.scroll(0,findPos(document.getElementById('experiencetitle')));">
+					<div class ="imgholder">
+						<img class = "menuimg" src = "img/briefcase.svg">
+					</div>
+					<p id = "workbutton" class = "menutxt" onclick = "aboutbuttonOnClick()">work</p>
+				</div>
 			</div>
 			<div id = "aboutme" class = "aboutme">
 				<p id = "closer" onclick = "closerOnClick()">X<p>
@@ -85,23 +101,27 @@
 				I am the most awesome aseowreja, athe crazy lahtlh, bluaha lanofaotn, blah blahnal;dljalotneop. Thene i Blah blah blah and went all the way to the blah blah blaaalalfoanfoenaloallafoneloslaooa.
 				</p>
 			</div>
+			<div id = "arrowdown" onclick = "window.scroll(0,findPos(document.getElementById('page2')));" align = "center">
+				<img id = "arrowdownimg" src = "img/arrow-down.png">
+			</div>
 		</div>
 		<div id = "page2" class = "page2">
+			<div id = "page2background"></div>
 			<div id = "skills">
 					<div id = "webdis" class = "skillsdis"><p class = "skillstxt">my web development skills</p></div>
 					<div id = "mobiledis" class = "skillsdis"><p class = "skillstxt">my mobile app development skills</p></div>
 					<div id = "otherdis" class = "skillsdis"><p class = "skillstxt">other skills</p></div>
 				<table id = "icontable" class = "skillstable">
 					<tr>
-						<td><div id = "web" class = "heading2" onmouseover = "dishover('webdis')" onmouseout = "disunhover('webdis')" onclick = "webclick()"><img id = "webimg" class = "headingimg" src = "img/code.png"></div></td>
-						<td><div id = "mobile" class = "heading2" onmouseover = "dishover('mobiledis')" onmouseout = "disunhover('mobiledis')" onclick = "mobileclick()"><img id = "mobileimg" class = "headingimg" src = "img/mobile.png"></div></td>
-						<td><div id = "other" class = "heading2" onmouseover = "dishover('otherdis')" onmouseout = "disunhover('otherdis')" onclick = "otherclick()"><img id = "otherimg" class = "headingimg" src = "img/menu.png"></div></td>
+						<td><div id = "web" class = "heading2" onmouseover = "dishover('webdis')" onmouseout = "disunhover('webdis')" onclick = "webclick('1')"><img id = "webimg" class = "headingimg" src = "img/globe.svg"></div></td>
+						<td><div id = "mobile" class = "heading2" onmouseover = "dishover('mobiledis')" onmouseout = "disunhover('mobiledis')" onclick = "mobileclick()"><img id = "mobileimg" class = "headingimg" src = "img/mobile.svg"></div></td>
+						<td><div id = "other" class = "heading2" onmouseover = "dishover('otherdis')" onmouseout = "disunhover('otherdis')" onclick = "otherclick()"><img id = "otherimg" class = "headingimg" src = "img/menu.svg"></div></td>
 					</tr>
 				</table>
 						
 				<div id = "webskills" >
 					<div id = "html" class = "section">
-						<div id = "htmltitle" class = "sectiontitle"><p id = "htmltxt" class = "sectiontxt">html</p></div>
+						<div id = "htmltitle" class = "sectiontitle"><img id = "htmltxt" class = "sectionimg" src = "img/code.svg"></div>
 						<div id = "htmldis" class = "sectiondis">
 							<p id = "htmlabout" class = "subdis">structual html/website development</p>
 							<p id = "html1" class = "subdis">experienced in web marked languages such as html, xml</p>
@@ -130,7 +150,7 @@
 				</div>
 				<div id = "mobileskills">					
 					<div id = "android" class = "section">
-						<div id = "androidtitle" class = "sectiontitle"><img id = "androidtxt" class = "sectionimg" src = "img/android.png"></div>
+						<div id = "androidtitle" class = "sectiontitle"><img id = "androidtxt" class = "sectionimg" src = "img/android.svg"></div>
 						<div id = "androiddis" class = "sectiondis">
 							<p id = "androidabout" class = "subdis">mobile application development for Google Android OS</p>
 							<p id = "android1" class = "subdis">knowlegable of Android development platform with Java and Eclipse IDE</p>
@@ -139,7 +159,7 @@
 						</div>
 					</div>
 					<div id = "wp8" class = "section">
-						<div id = "wp8title" class = "sectiontitle"><img id = "wptxt" class = "sectionimg" src = "img/windows8.png"></div>
+						<div id = "wp8title" class = "sectiontitle"><img id = "wptxt" class = "sectionimg" src = "img/windows8.svg"></div>
 						<div id = "wpdis" class = "sectiondis">
 							<p id = "wpabout" class = "subdis">application development for Microsoft's Windows 8 and Windows Phone 8</p>
 							<p id = "wp1" class = "subdis">I've created apps using C# using Visual Studio IDE</p>
@@ -169,7 +189,7 @@
 						</div>
 					</div>
 					<div id = "svn" class = "section">
-						<div id = "svntitle" class = "sectiontitle"><img id = "svntxt" class = "sectionimg" src = "img/github.png"></div>
+						<div id = "svntitle" class = "sectiontitle"><img id = "svntxt" class = "sectionimg" src = "img/github.svg"></div>
 						<div id = "svndis" class = "sectiondis">
 							<p id = "svnabout" class = "subdis">group mentality using Scrum development stuctures</p>
 							<p id = "svn1" class = "subdis">expert in CSS and website design</p>
@@ -194,18 +214,93 @@
 					<div class = "forth"></div>
 					<div class = "fifth"></div>
 				</div>
-			</div>	
+			</div>
+			
+			<div id = "experiencetitle">Previous Experience</div>
 			<div id = "experience">
-				
-			
-			
-			
+				<table id = "experiencetable">
+					<tr>
+						<td>
+							<div id = "hydratenow" class = "projects" onclick = "hydratenowclick()">
+								<p id = "hydratenowtxt" class = "projecttxt">Hydrate Now Va-ncouver</p>
+								<p id = "hydratenowsubtxt" class = "projectsubtxt">GWT/HTML/CSS3/JAVA/AJAX/JDO/Persistance</p>
+							</div>
+						</td>
+						<td>
+							<div id = "communityplace" class = "projects"  onclick = "cpclick()">
+								<p id = "communityplacetxt" class = "projecttxt">Comm-unity P-lace</p>
+								<p id = "communityplacesubtxt" class = "projectsubtxt">HTML5/CSS3/JavaScript/Cross-Platform APP/Non-Profit</p>
+							</div>
+						</td>
+						<td>
+							<div id = "foodfinder" class = "projects"  onclick = "ffclick()">
+								<p id = "foodfindertxt" class = "projecttxt">UBC Fo-od Find-er</p>
+								<p id = "foodfindersubtxt" class = "projectsubtxt">XML/JAVA/Android App</p>
+							</div>
+						</td>
+						<td>
+							<div id = "alarmclock" class = "projects"  onclick = "alarmclick()">
+								<p id = "alarmclocktxt" class = "projecttxt">The Wo-rst Alar-m Clock Ever Ma-de</p>
+								<p id = "alarmclocksubtxt" class = "projectsubtxt">.NET/WP8/XAML/C#</p>
+							</div>
+						</td>
+						<td>
+							<div id = "resume" class = "projects" onclick = "resumeclick()">
+								<p id = "resumetxt" class = "projecttxt">The Site You are on Now</p>
+								<p id = "resumesubtxt" class = "projectsubtxt">HTML5/CSS3/PHP/AJAX/JavaScript/JQuery/SQL</p>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div id = "hydratenowdis" class = "projectdis">
+					<p class = "projectcloser" onclick = "showexperience()">X<p>
+					<p id = "hyratenowdistitle" class = "projectdistitle">Hydrate Now Vancouver</p>
+					<img id = "hydratenowimg" class = "projectimg" src = "img/hydratenow.png">
+					<p id = "hyratenowdistxt" class = "projectdistxt">This is a web application made 
+					using the Google Web Toolkit (GWT). The client asked for an intuitive website
+					that geo-located all of the drinking fountains in the metro-Vancouver. For this project
+					my team and I decided to follow the Scrum development process complete with bi-weekly sprints, 
+					user stories, daily stand-ups, and retrospectives. This site primarily target bikers and pedistrians
+					who needed re-hydrate, which is why we implemented two clever search capabilities to find the closest
+					drinking fountain to any point of interest. So go check it out!</p>
+					<p id = "hyratenowdisbutton" class = "projectdisbutton">Check it Out</p>
+				</div>
+				<div id = "cpdis" class = "projectdis">
+					<p class = "projectcloser" onclick = "showexperience()">X<p>
+					<p id = "cpdistitle" class = "projectdistitle">Community Place</p>
+					<img id = "cpimg" class = "projectimg" src = "img/cp.png">
+					<p id = "cpdistxt" class = "projectdistxt"></p>
+					<p id = "cpdisbutton" class = "projectdisbutton">Check it Out</p>
+				</div>
+				<div id = "ffdis" class = "projectdis">
+					<p class = "projectcloser" onclick = "showexperience()">X<p>
+					<p id = "ffdistitle" class = "projectdistitle">UBC Food Finder</p>
+					<img id = "ffimg" class = "projectimg" src = "">
+					<p id = "ffdistxt" class = "projectdistxt"></p>
+					<p id = "ffdisbutton" class = "projectdisbutton">Check it Out</p>
+				</div>
+				<div id = "alarmdis" class = "projectdis">
+					<p class = "projectcloser" onclick = "showexperience()">X<p>
+					<p id = "alarmdistitle" class = "projectdistitle">Menacing Alarm Clock</p>
+					<img id = "alarmimg" class = "projectimg" src = "">
+					<p id = "alarmdistxt" class = "projectdistxt"></p>
+					<p id = "alarmdisbutton" class = "projectdisbutton">Check it Out</p>
+				</div>
+				<div id = "resumedis" class = "projectdis">
+					<p class = "projectcloser" onclick = "">X<p>
+					<p id = "resumedistitle" class = "projectdistitle">Kim and Bo</p>
+					<img id = "resumenowimg" class = "projectimg" src = "">
+					<p id = "resumedistxt" class = "projectdistxt"></p>
+					<p id = "resumedisbutton" class = "projectdisbutton">Check it Out</p>
+				</div>
 			</div>
-			<div id = "blog">
-			
-			
-			
-			</div>
+			<div id = "sep2" class = "skillsendline">
+					<div class = "first"></div>
+					<div class = "second"></div>
+					<div class = "third"></div>
+					<div class = "forth"></div>	
+					<div class = "fifth"></div>
+				</div>
 		</div>
 	</body>
 </html>

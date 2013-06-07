@@ -74,9 +74,11 @@ function disunhover(id){
 
 }
 
-function webclick(){
+function webclick(element){
 	allclear();
-	document.getElementById("skills").style.height = "62.3em";
+	if(element != '0')
+		window.scroll(0,findPos(document.getElementById('skills')));
+	document.getElementById("skills").style.height = "64.3em";
 	document.getElementById("htmltitle").style.opacity = "1";
 	document.getElementById("htmldis").style.opacity = "1";
 	document.getElementById("uxtitle").style.opacity = "1";
@@ -86,23 +88,36 @@ function webclick(){
 }
 function mobileclick(){
 	allclear();
-	document.getElementById("skills").style.height = "62.3em";
+	
+	document.getElementById("skills").style.height = "64.3em";
 	document.getElementById("androidtitle").style.opacity = "1";
 	document.getElementById("androiddis").style.opacity = "1";
 	document.getElementById("wp8title").style.opacity = "1";
 	document.getElementById("wpdis").style.opacity = "1";
 	document.getElementById("html5title").style.opacity = "1";
 	document.getElementById("html5dis").style.opacity = "1";
+	window.scroll(0,findPos(document.getElementById('skills')));
 }
 function otherclick(){
 	allclear();
-	document.getElementById("skills").style.height = "62.3em";
+	window.scroll(0,findPos(document.getElementById('skills')));
+	document.getElementById("skills").style.height = "64.3em";
 	document.getElementById("systemstitle").style.opacity = "1";
 	document.getElementById("systemsdis").style.opacity = "1";
 	document.getElementById("svntitle").style.opacity = "1";
 	document.getElementById("svndis").style.opacity = "1";
 	document.getElementById("hobbiestitle").style.opacity = "1";
 	document.getElementById("hobbiesdis").style.opacity = "1";
+}
+
+function findPos(obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    return [curtop];
+    }
 }
 
 function allclear(){
@@ -124,6 +139,46 @@ function allclear(){
 	document.getElementById("svndis").style.opacity = "0";
 	document.getElementById("hobbiestitle").style.opacity = "0";
 	document.getElementById("hobbiesdis").style.opacity = "0";
+}
+
+
+/*Experience*/
+function hydratenowclick(){	
+	hideexperience();
+	document.getElementById("hydratenowdis").style.marginTop = "-50em";
+
+}
+
+function cpclick(){	
+	hideexperience();
+	document.getElementById("cpdis").style.marginTop = "-100em";
+}
+function ffclick(){	
+	hideexperience();
+	document.getElementById("ffdis").style.marginTop = "-150em";
+}
+function alarmclick(){	
+	hideexperience();
+	document.getElementById("alarmdis").style.marginTop = "-200em";
+}
+function resumeclick(){	
+	hideexperience();
+	document.getElementById("resumenowdis").style.marginTop = "-250em";
+}
+function hideexperience(){
+	document.getElementById("experiencetable").style.visibility = "hidden";
+	document.getElementById("experiencetable").style.opacity = "0";
 	
+}
+
+function showexperience(){	
+	document.getElementById("experiencetable").style.visibility = "visible";
+	document.getElementById("experiencetable").style.opacity = "1";
+	document.getElementById("hydratenowdis").style.marginTop = "0em";
+	document.getElementById("cpdis").style.marginTop = "0em";
+	document.getElementById("ffdis").style.marginTop = "0em";
+	document.getElementById("alarmdis").style.marginTop = "0em";
+	document.getElementById("resumedis").style.marginTop = "0em";
+
 
 }
