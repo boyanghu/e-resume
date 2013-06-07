@@ -3,8 +3,10 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 		<title>Bo Yang Hu</title>
 		<link type="text/css" rel="stylesheet" href="bo.css">
+		<script type="text/javascript" src="bo.js"></script>
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/favicon.png" type="image/png">
 		<link rel="shortcut icon" type="image/png" href="http://i.imgur.com/kXZlDTH.png" />
@@ -12,31 +14,64 @@
 	<body>
 		<div id = "socialpanel" class = "socialpanel">
 			<table class = "socialtable">
-				<tr> <div id = "facebook" class = "button">
-					<img class = "socialbutton" src = "http://i.imgur.com/QjSn4bF.png">
+				<tr> <div id = "facebook" onclick = "facebookOnClick()" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
+					<img class = "socialbutton" src = "img/facebook.png">
 				</div></tr>
-				<tr> <div id = "twitter" class = "button">
-					<img class = "socialbutton" src = "http://i.imgur.com/6tGooTU.png">
+				<tr> <div id = "twitter" onclick = "twitterOnClick()" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
+					<img class = "socialbutton" src = "img/twitter.png">
 				</div></tr>
-				<tr> <div id = "gmail" class = "button">
-					<img class = "socialbutton" src = "http://i.imgur.com/sHhxqjW.png">
+				<tr> <div id = "gmail" onclick = "mailOnClick()" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
+					<img class = "socialbutton" src = "img/mail.png">
 				</div></tr>
 			</table>
 		</div>
+			
+		<div id = "socialdispanel" class = "socialpanel">
+			<table class = "socialtable">
+				<tr> <div id = "facebookdis" class = "buttondis">
+					<p class = "socialbuttondis">Hit me up on Facebook</p>
+				</div></tr>
+				<tr> <div id = "twitterdis" class = "buttondis">
+					<p class = "socialbuttondis">Tweet at me</p>
+				</div></tr>
+				<tr> <div id = "gmaildis" class = "buttondis">
+					<p class = "socialbuttondis">Send me an e-mail</p>
+				</div></tr>
+			</table>
+		</div>
+		
+		<div id = "facebookpanel" class = "socialpanel">
+			<p id = "fbcloser" onclick = "fpcloserOnClick()">X<p>
+			<iframe id = "fbframe" src="http://www.facebook.com"></iframe>
+		</div>
+		
+		<div id = "twitterpanel" class = "socialpanel">
+			<p id = "tcloser" onclick = "tcloserOnClick()">X<p>
+		</div>
+		
+		<div id = "mailpanel" class = "socialpanel">
+			<p id = "mcloser" onclick = "mcloserOnClick()">X<p>
+		</div>
+		
 		<div id = "page1" class = "page1">
 			<div id = "title" class = "title">Bo</div>
 			<div id = "menu" class = "menu">
 				<table id = "menutable" class = "menutable">
 					<tr>
-						<td><p id = "aboutbutton" class = "menuitem">about</p></td>
+						<td><p id = "aboutbutton" class = "menuitem" onclick = "aboutbuttonOnClick()">about</p></td>
 						<td><p id = "skillsbutton" class = "menuitem">skills</p></td>
 						<td><p id = "workbutton" class = "menuitem">work</p></td>
 					</tr>
 				</table>
 			</div>
+			<div id = "aboutme" class = "aboutme">
+				<p id = "closer" onclick = "closerOnClick()">X<p>
+				<p id="aboutmetxt" class = "aboutmetxt">
+				I am the most awesome aseowreja, athe crazy lahtlh, bluaha lanofaotn, blah blahnal;dljalotneop. Thene i Blah blah blah and went all the way to the blah blah blaaalalfoanfoenaloallafoneloslaooa.
+				</p>
+			</div>
 		</div>
 		<div id = "page2" class = "page2">
-		
 		</div>
 	</body>
 </html>
