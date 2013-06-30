@@ -1,3 +1,4 @@
+//cool stuff
 function closerOnClick(){
 	document.getElementById("aboutme").style.opacity = "0";
 }
