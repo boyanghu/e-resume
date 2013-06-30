@@ -4,13 +4,24 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-		<!--<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<title>Bo Yang Hu</title>
 		<link type="text/css" rel="stylesheet" href="botest.css">
+		<link type="text/css" rel="stylesheet" href="mobile.css">
 		<script type="text/javascript" src="bo.js"></script>
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 		<link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+		<script>
+		$(document).ready(function(){
+			$(window).resize(function (){
+				$("page2").hide();
+			});
+		});
+		
+		
+		
+		</script>
 	</head>
 	<body onload = "webclick('0')">
 		<div id = "background"></div>
@@ -192,7 +203,7 @@
 						</div>
 					</div>
 					<div id = "hobbies" class = "section">
-						<div id = "hobbiestitle" class = "sectiontitle"><img id = "hobbiestxt" class = "sectionimg" src = "img/hamburger.png"></div>
+						<div id = "hobbiestitle" class = "sectiontitle"><img id = "hobbiestxt" class = "sectionimg" src = "img/hockey.svg"></div>
 						<div id = "hobbiesdis" class = "sectiondis">
 							<p id = "hobbiesabout" class = "subdis">stuff not related to computers</p>
 							<p id = "hobbies1" class = "subdis">a Google Web Toolkit vetern</p>
@@ -281,7 +292,7 @@
 					<p id = "alarmdisbutton" class = "projectdisbutton">Check it Out</p>
 				</div>
 				<div id = "resumedis" class = "projectdis">
-					<p class = "projectcloser" onclick = "">X<p>
+					<p class = "projectcloser" onclick = "showexperience()">X<p>
 					<p id = "resumedistitle" class = "projectdistitle">Kim and Bo</p>
 					<img id = "resumenowimg" class = "projectimg" src = "">
 					<p id = "resumedistxt" class = "projectdistxt"></p>
@@ -294,7 +305,22 @@
 					<div class = "third"></div>
 					<div class = "forth"></div>	
 					<div class = "fifth"></div>
+			</div>
+		</div>
+		<div id = "page3">
+			<div id ="topspacer"></div>
+			<div id ="leftspacer"></div>
+			<div id = "bigtable">
+				<div id = "facebookbig" class = "socialbig">
+					<div class = "imgspacer"><img id = "facebookbigpic" class ="socialbigpic" src = "img/facebook.svg"></div>
 				</div>
+				<div id = "linkedinbig" class = "socialbig">
+					<div class = "imgspacer"><img id = "linkedinbigpic" class ="socialbigpic" src = "img/linkedin.svg"></div>
+				</div>
+				<div id = "mailbig" class = "socialbig">
+					<div class = "imgspacer"><img id = "mailbigpic" class ="socialbigpic" src = "img/envelope.svg"></div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

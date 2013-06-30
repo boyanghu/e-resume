@@ -1,4 +1,4 @@
-@media screen and (max-height: 1200px){
+@media screen and (min-height: 1200px){
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,7 +46,8 @@ table {
 
 html {
 	height: 100%;
-	width:100%
+	width:100%;
+	overflow-x:hidden;
 }
 body {
 	
@@ -70,15 +71,15 @@ body:hover{
 	top:0;
 	/*background-image: url("img/grey_wash_wall.png");*/
 	background-attachment:fixed;
-	background-image: url("img/me.jpg");
-	background-size: cover;
+	background-image: url("img/minime.jpg");
+	background-size: 1080px 1920px;
     background-repeat: no-repeat;
 
 }
 
 .page1{
 	width: 100%;
-	height: 100%;
+	height: 200%;
 	position:relative;
 }
 
@@ -88,54 +89,41 @@ body:hover{
 	background-color:#78c0a8;
 	color:#5e412f;
 	font-family: 'Limelight', cursive;
-	font-size:12em;
+	font-size:30em;
 	text-align: center;
-	margin-left: 0.05em;
-	margin-top: 0.05em;
+	margin:auto;
+	margin-top: 0.25em;
 	line-height: 1.5em;
 	position: relative;
 }
 
-.title:hover{
-	cursor:crosshair;
-}
 
 #menu{
 	background-color: rgba(150,150,150,1);
-	width: 21em;
-	height: 7em;
+	width: 45em;
+	height: 15em;
 	overflow: hidden;
-	position:absolute;
-	right: 7%;
-	top: 2em;
+	position:relative;
+	margin:auto;
 }
 .menuimg{
-	width: 2.5em;
-	margin-top: 2.25em;
-	margin-left:2.25em;
+	width: 7em;
+	margin-top: 4em;
+	margin-left:4em;
 	
 }
 
 .imgholder{
-	width:7em;
-	height: 7em;
+	width:15em;
+	height: 15em;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;	
 }
-.imgholder:hover{
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-	-ms-transform: rotateY(180deg);
-	-o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
-
-
 
 .menuitem{
-	width:7em;
-	height: 7em;
+	width:15em;
+	height: 15em;
 	overflow: hidden;
 	position:relative;
 }
@@ -146,6 +134,7 @@ body:hover{
 	margin-top: -2em;
 	text-align:center;
 	line-height: 2em;
+	font-size: 2em;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: rgba(46,46,46,1);
 }
@@ -157,14 +146,14 @@ body:hover{
 
 #menuskills{
 	background-color:#5e412f;
-	top: -7em;
-	left: 7em;
+	top: -15em;
+	left: 15em;
 }
 
 #menuwork{
 	background-color:#6E5444;
-	top: -14em;
-	left: 14em;
+	top: -30em;
+	left: 30em;
 }
 #aboutbutton{
 	color:#fcebb6;
@@ -188,6 +177,7 @@ body:hover{
 	margin-top:10%;
 	position: fixed;
 	size:fixed;
+	display:none;
 	
 }
 
@@ -196,12 +186,16 @@ body:hover{
 	background-color: rgba(46,46,46,1);
 	right:0;
 	z-index:1000;
+	display:none;
+	
 }
 
 #socialdispanel{
 	width: 340px;
 	right: 45px;
 	z-index:0;
+	display:none;
+	
 }
 
 
@@ -209,12 +203,16 @@ body:hover{
 	width:24px;
 	margin-left: 8px;
 	margin-top: 8px;
+	display:none;
+	
 }
 
 .socialbuttondis{
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 15px;
 	color: rgba(46,46,46,1);
+	display:none;
+	
 }
 
 .button{
@@ -289,10 +287,6 @@ body:hover{
 	-o-transition: all 0.3s ease-in-out;
 }
 
-#closer:hover{
-		border-bottom: 1px solid rgba(0,0,0,1);
-}
-
 
 #aboutmetxt{
 	width: 20em;
@@ -329,9 +323,6 @@ body:hover{
 	-o-transition: all 0.3s ease-in-out;
 }
 
-#fbcloser:hover{
-		border-bottom: 1px solid rgba(0,0,0,1);
-}
 
 #twitterpanel{
 	visibility:collapse;
@@ -354,10 +345,6 @@ body:hover{
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
-}
-
-#tcloser:hover{
-		border-bottom: 1px solid rgba(0,0,0,1);
 }
 
 #mailpanel{
@@ -383,9 +370,6 @@ body:hover{
 	-o-transition: all 0.3s ease-in-out;
 }
 
-#mcloser:hover{
-		border-bottom: 1px solid rgba(0,0,0,1);
-}
 
 #mailform{
 	margin: 10px;
@@ -417,12 +401,6 @@ body:hover{
 	-o-transition: all 0.3s ease-in-out;
 	border:none;
 	background-color:rgba(0,0,0,0);
-}
-
-#send:hover{
-	right:0px;
-	cursor:crosshair;
-	
 }
 
 .heading{
@@ -482,10 +460,6 @@ body:hover{
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
-}
-
-#arrowdownimg:hover{
-	margin-top: 1em;
 }
 
 #page2{
@@ -774,10 +748,6 @@ body:hover{
 	-o-transition: all 0.3s ease-in-out;
 }
 
-.projects:hover{
-	cursor:pointer;
-}
-
 #experiencetable{
 	height:50em;
 	-webkit-transition: all 0.6s ease-in-out;
@@ -788,10 +758,6 @@ body:hover{
 #hydratenow{
 	top:0;
 	background-color: #78c0a8;
-}
-
-#hydratenow:hover,#communityplace:hover,#foodfinder:hover,#alarmclock:hover,#resume:hover{
-	background-color:#F4C26E;
 }
 
 #communityplace{
@@ -905,10 +871,6 @@ body:hover{
 	-o-transition: all 0.3s ease-in-out;
 }
 
-.projectcloser:hover{
-		border-bottom: 1px solid rgba(50,50,50,1);
-}
-
 .projectdisbutton{
 	font-family: 'Limelight', cursive;
 	font-size: 2em;
@@ -918,11 +880,6 @@ body:hover{
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
-}
-
-.projectdisbutton:hover{
-	text-decoration: underline;
-	cursor:pointer;
 }
 
 #hydratenowdis{
@@ -957,14 +914,6 @@ body:hover{
 	-o-transition: all 0.6s ease-in-out;
 }
 
-.imgspacer:hover{
-	cursor:pointer;
-	transform:rotate(-45deg);
-	-ms-transform:rotate(-45deg); /* IE 9 */
-	-webkit-transform:rotate(-45deg); /* Safari and Chrome */
-
-}
-
 .socialbig{
 	width: 15em;
 	height: 15em;
@@ -974,12 +923,6 @@ body:hover{
 	-o-transition: all 0.6s ease-in-out;
 }
 
-.socialbig:hover{
-	z-index:10;
-	transform:rotate(45deg);
-	-ms-transform:rotate(45deg); /* IE 9 */
-	-webkit-transform:rotate(45deg); /* Safari and Chrome */
-}
 .socialbigpic{
 	width: 7em;
 	margin-top:4em;
@@ -999,5 +942,7 @@ body:hover{
 	left:30em;
 	top:-30em;
 }
-}
+
+
+
 }
