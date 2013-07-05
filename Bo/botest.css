@@ -91,7 +91,7 @@ body:hover{
 	font-size:12em;
 	text-align: center;
 	margin-left: 0.05em;
-	margin-top: 0.05em;
+	top: 0.05em;
 	line-height: 1.5em;
 	position: relative;
 }
@@ -101,10 +101,9 @@ body:hover{
 }
 
 #menu{
-	background-color: rgba(150,150,150,1);
+	background-color: rgba(150,150,150,0);
 	width: 21em;
 	height: 7em;
-	overflow: hidden;
 	position:absolute;
 	right: 7%;
 	top: 2em;
@@ -124,14 +123,32 @@ body:hover{
 	-o-transition: all 0.3s ease-in-out;	
 }
 .imgholder:hover{
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-	-ms-transform: rotateY(180deg);
-	-o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 
+
+.menuitem{
+	width:7em;
+	height: 7em;
+	overflow: hidden;
+	position:relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;	
+}
+.menuitem:hover{
+	z-index:10;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
 
 .menuitem{
 	width:7em;
@@ -143,7 +160,7 @@ body:hover{
 .menutxt{
 	width:100%;
 	height: 2em;
-	margin-top: -2em;
+	margin-top: 0em;
 	text-align:center;
 	line-height: 2em;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -306,167 +323,6 @@ body:hover{
 	
 }
 
-#facebookpanel{
-	visibility:collapse;
-	width: 0%;
-	background-color: rgba(0,197,205,1);
-	z-index:1000;
-	right: 45px;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-}
-
-#fbcloser{
-	float: right;
-	margin-top: 12px;
-	margin-right: 12px;
-	font-family: 'Limelight', cursive;
-	font-size: 35px;
-	border-bottom: 1px solid rgba(0,0,0,0);
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-}
-
-#fbcloser:hover{
-		border-bottom: 1px solid rgba(0,0,0,1);
-}
-
-#twitterpanel{
-	visibility:collapse;
-	width: 0%;
-	background-color: rgba(238,106,80,1);
-	z-index:1000;
-	right: 45px;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-}
-
-#tcloser{
-	float: right;
-	margin-top: 12px;
-	margin-right: 12px;
-	font-family: 'Limelight', cursive;
-	font-size: 35px;
-	border-bottom: 1px solid rgba(0,0,0,0);
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-}
-
-#tcloser:hover{
-		border-bottom: 1px solid rgba(0,0,0,1);
-}
-
-#mailpanel{
-	visibility:collapse;
-	width: 0%;
-	background-color: rgba(137,104,205,1);
-	z-index:1000;
-	right: 45px;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-}
-
-#mcloser{
-	float: right;
-	margin-top: 12px;
-	margin-right: 12px;
-	font-family: 'Limelight', cursive;
-	font-size: 35px;
-	border-bottom: 1px solid rgba(0,0,0,0);
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-}
-
-#mcloser:hover{
-		border-bottom: 1px solid rgba(0,0,0,1);
-}
-
-#mailform{
-	margin: 10px;
-	margin-top: 45px;
-	overflow:hidden;
-}
-
-
-
-
-#send{
-	width: 150px;
-	bottom: 20px;
-	right:20px;
-	position:absolute;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-}
-
-#sendbutton {
-	width:100%;
-	height: 100%;
-	font-family: 'Limelight', cursive;
-	font-size: 35px;
-	border-bottom: 1px solid rgba(0,0,0,0);
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	border:none;
-	background-color:rgba(0,0,0,0);
-}
-
-#send:hover{
-	right:0px;
-	cursor:crosshair;
-	
-}
-
-.heading{
-	margin-left:20px;
-	margin-top:20px;
-	margin-bottom:10px;
-	font-family: 'Limelight', cursive;
-	font-size: 25px;
-}
-
-.input{
-	border:none;
-	background-color: rgba(0,0,0,0);
-	border-bottom: 1px solid rgba(46,46,46,1);
-	width: 80%;
-	margin-left:20px;
-	margin-bottom:10px;
-	height: 30px;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 15px;
-}
-
-.input:focus{
-	background-color: rgba(255,255,255,0.3);
-	outline:none;
-}
-
-
-#messageinput{
-	position:absolute;
-	border:none;
-	background-color: rgba(255,255,255,0.3);
-	width: 75%;
-	margin-left:20px;
-	top:245px;
-	bottom: 70px;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 15px;
-	resize:none;
-}
-
-#messageinput:focus{
-	outline:none;
-}
 
 #arrowdown{
 	width: 100%;
@@ -934,6 +790,7 @@ body:hover{
 	width: 100%;
 	position:relative;
 	background-color:rgba(85,58,42,0.7);
+	overflow:hidden;
 }
 
 #topspacer{
@@ -999,5 +856,49 @@ body:hover{
 	left:30em;
 	top:-30em;
 }
+
+#mailpanel{
+	width:100%;
+	height:100%;
+	background-color:#78c0a8;
+	z-index:10;
+	position:fixed;
+	size:fixed;
+}
+
+#mcloser{
+	width:2em;
+	float:right;
+	margin-top: 1em;
+	margin-right:1em;
+	z-index:20;
+
+}
+
+#mailform{
+	width:100%;
+	height:100%;
+}
+#frommail{
+	width:70%;
+	height:50%;
+	border:1px solid black;
+}
+
+#name{
+	width:100%;
+	height:60%;
+	overflow:hidden;
+	background-color:#78c0a8;
+	
+}
+
+#send{
+	float:right;
+	position:relative;
+	top:-50%;
+	width:30%;
+	height:50%;
+	border:1px solid pink;
 }
 }

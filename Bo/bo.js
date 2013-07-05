@@ -49,7 +49,7 @@ function mailOnClick(){
 	tcloserOnClick();
 	fbcloserOnClick();
 	document.getElementById("mailpanel").style.visibility = "visible";
-	document.getElementById("mailpanel").style.width = "50%";
+	document.getElementById("mailpanel").style.width = "80%";
 	document.getElementById("mcloser").style.visibility = "visible";
 	document.getElementById("sendbutton").style.visibility = "visible";
 }
@@ -164,15 +164,18 @@ function alarmclick(){
 }
 function resumeclick(){	
 	hideexperience();
-	document.getElementById("resumenowdis").style.marginTop = "-250em";
+	document.getElementById("resumedis").style.marginTop = "-250em";
 }
 function hideexperience(){
+	document.getElementById('experience').scrollLeft += -2000;
+	document.getElementById("experience").style.overflowX = "hidden";
 	document.getElementById("experiencetable").style.visibility = "hidden";
 	document.getElementById("experiencetable").style.opacity = "0";
 	
 }
 
 function showexperience(){	
+	document.getElementById("experience").style.overflowX = "scroll";
 	document.getElementById("experiencetable").style.visibility = "visible";
 	document.getElementById("experiencetable").style.opacity = "1";
 	document.getElementById("hydratenowdis").style.marginTop = "0em";

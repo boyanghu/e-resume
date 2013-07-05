@@ -30,7 +30,7 @@
 				<tr> <div id = "facebook" onclick = "location.href = 'https://www.facebook.com/bo.y.hu.3?ref=tn_tnmn';" class = "button" onmouseover = "hover('facebookdis')" onmouseout = "unhover('facebookdis')">
 					<img class = "socialbutton" src = "img/facebook.svg">
 				</div></tr>
-				<tr> <div id = "twitter" onclick = "twitterOnClick()" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
+				<tr> <div id = "twitter" onclick = "location.href = 'http://www.linkedin.com/pub/bo-hu/76/74/462?trk=tbr';" class = "button" onmouseover = "hover('twitterdis')" onmouseout = "unhover('twitterdis')">
 					<img class = "socialbutton" src = "img/linkedin.svg">
 				</div></tr>
 				<tr> <div id = "gmail" onclick = "mailOnClick()" class = "button" onmouseover = "hover('gmaildis')" onmouseout = "unhover('gmaildis')">
@@ -53,28 +53,20 @@
 			</table>
 		</div>
 		
-		<div id = "facebookpanel" class = "socialpanel">
-			<p id = "fbcloser" onclick = "fbcloserOnClick()">X<p>
-			<iframe id = "fbframe" src="http://www.facebook.com"></iframe>
-		</div>
-		
-		<div id = "twitterpanel" class = "socialpanel">
-			<p id = "tcloser" onclick = "tcloserOnClick()">X<p>
-		</div>
-		
-		<div id = "mailpanel" class = "socialpanel">
-			<p id = "mcloser" onclick = "mcloserOnClick()">X<p>
+		<div id = "mailpanel">
+			<img id = "mcloser" onclick = "mcloserOnClick()" src = "img/cancel-circle.svg">
 			<form id = "mailform" action = "mail.php">
 				<div id = "frommail">
-					<p id = "from" class = "heading">From:</p>
-					<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
+					<div id = "name"><p id = "from" class = "heading">From:</p>
+					 <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
 					<div id = "email"><input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail"></input></div>
 				</div>
+				<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
 				<div id = "messagemail">
 					<p id = "message" class = "heading">Message:</p>
 					<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
 				</div>
-				<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
+				
 			</form>
 		</div>
 		
@@ -83,21 +75,21 @@
 			<div id = "menu" class = "menu">
 				<div id = "menuabout" class = "menuitem"onclick = "aboutbuttonOnClick()"> 
 					<div class ="imgholder">
-						<img class = "menuimg" src = "img/user.svg">
+						<img class = "menuimg" src = "img/user.svg"><p id = "aboutbutton" class = "menutxt" >about</p>
 					</div>
-					<p id = "aboutbutton" class = "menutxt" >about</p>
+					
 				</div>
 				<div id = "menuskills" class = "menuitem"onclick = "window.scroll(0,findPos(document.getElementById('skills')));">
 					<div class ="imgholder">
-						<img class = "menuimg" src = "img/wrench.svg">
+						<img class = "menuimg" src = "img/wrench.svg"><p class = "menutxt" id = "skillsbutton"  >skills</p>
 					</div>
-					<p class = "menutxt" id = "skillsbutton"  >skills</p>
+					
 				</div>
 				<div id = "menuwork" class = "menuitem" onclick = "window.scroll(0,findPos(document.getElementById('experiencetitle')));">
 					<div class ="imgholder">
-						<img class = "menuimg" src = "img/briefcase.svg">
+						<img class = "menuimg" src = "img/briefcase.svg"><p id = "workbutton" class = "menutxt" onclick = "aboutbuttonOnClick()">work</p>
 					</div>
-					<p id = "workbutton" class = "menutxt" onclick = "aboutbuttonOnClick()">work</p>
+					
 				</div>
 			</div>
 			<div id = "aboutme" class = "aboutme">
@@ -311,10 +303,10 @@
 			<div id ="topspacer"></div>
 			<div id ="leftspacer"></div>
 			<div id = "bigtable">
-				<div id = "facebookbig" class = "socialbig">
+				<div id = "facebookbig" class = "socialbig" onclick = "location.href = 'https://www.facebook.com/bo.y.hu.3?ref=tn_tnmn';">
 					<div class = "imgspacer"><img id = "facebookbigpic" class ="socialbigpic" src = "img/facebook.svg"></div>
 				</div>
-				<div id = "linkedinbig" class = "socialbig">
+				<div id = "linkedinbig" class = "socialbig" onclick = "location.href = 'http://www.linkedin.com/pub/bo-hu/76/74/462?trk=tbr';">
 					<div class = "imgspacer"><img id = "linkedinbigpic" class ="socialbigpic" src = "img/linkedin.svg"></div>
 				</div>
 				<div id = "mailbig" class = "socialbig">
