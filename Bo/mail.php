@@ -7,5 +7,5 @@
 	$subject = "From e-resume";
 	$mailheader = "From: $email \r\n";
 	mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-	
 ?>
+<body onload = "location.href = 'bo.html'"></>

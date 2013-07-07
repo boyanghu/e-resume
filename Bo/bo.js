@@ -49,7 +49,10 @@ function mailOnClick(){
 	tcloserOnClick();
 	fbcloserOnClick();
 	document.getElementById("mailpanel").style.visibility = "visible";
-	document.getElementById("mailpanel").style.width = "80%";
+	if(window.innerWidth > 1200)
+		document.getElementById("mailpanel").style.width = "50%";
+	else
+		document.getElementById("mailpanel").style.width = "90%";
 	document.getElementById("mcloser").style.visibility = "visible";
 	document.getElementById("sendbutton").style.visibility = "visible";
 }
@@ -66,7 +69,6 @@ function mcloserOnClick(){
 
 function dishover(id){
 	document.getElementById(id).style.opacity = "1";
-
 }
 
 
@@ -79,7 +81,7 @@ function webclick(element){
 	allclear();
 	if(element != '0')
 		window.scroll(0,findPos(document.getElementById('skills')));
-	document.getElementById("skills").style.height = "64.3em";
+	document.getElementById("skills").style.height = "84.3em";
 	document.getElementById("htmltitle").style.opacity = "1";
 	document.getElementById("htmldis").style.opacity = "1";
 	document.getElementById("uxtitle").style.opacity = "1";
@@ -90,7 +92,7 @@ function webclick(element){
 function mobileclick(){
 	allclear();
 	
-	document.getElementById("skills").style.height = "64.3em";
+	document.getElementById("skills").style.height = "84.3em";
 	document.getElementById("androidtitle").style.opacity = "1";
 	document.getElementById("androiddis").style.opacity = "1";
 	document.getElementById("wp8title").style.opacity = "1";
@@ -102,7 +104,7 @@ function mobileclick(){
 function otherclick(){
 	allclear();
 	window.scroll(0,findPos(document.getElementById('skills')));
-	document.getElementById("skills").style.height = "64.3em";
+	document.getElementById("skills").style.height = "84.3em";
 	document.getElementById("systemstitle").style.opacity = "1";
 	document.getElementById("systemsdis").style.opacity = "1";
 	document.getElementById("svntitle").style.opacity = "1";
@@ -146,25 +148,25 @@ function allclear(){
 /*Experience*/
 function hydratenowclick(){	
 	hideexperience();
-	document.getElementById("hydratenowdis").style.marginTop = "-50em";
+	document.getElementById("hydratenowdis").style.marginTop = "-60em";
 
 }
 
 function cpclick(){	
 	hideexperience();
-	document.getElementById("cpdis").style.marginTop = "-100em";
+	document.getElementById("cpdis").style.marginTop = "-120em";
 }
 function ffclick(){	
 	hideexperience();
-	document.getElementById("ffdis").style.marginTop = "-150em";
+	document.getElementById("ffdis").style.marginTop = "-180em";
 }
 function alarmclick(){	
 	hideexperience();
-	document.getElementById("alarmdis").style.marginTop = "-200em";
+	document.getElementById("alarmdis").style.marginTop = "-240em";
 }
 function resumeclick(){	
 	hideexperience();
-	document.getElementById("resumedis").style.marginTop = "-250em";
+	document.getElementById("resumedis").style.marginTop = "-300em";
 }
 function hideexperience(){
 	document.getElementById('experience').scrollLeft += -2000;
