@@ -17,37 +17,8 @@ function unhover(element){
 	document.getElementById("socialdispanel").style.zIndex = "0";
 }
 
-function facebookOnClick(){
-	tcloserOnClick();
-	mcloserOnClick();
-	document.getElementById("facebookpanel").style.visibility = "visible";
-	document.getElementById("facebookpanel").style.width = "50%";
-	document.getElementById("fbcloser").style.visibility = "visible";
-}
-
-function fbcloserOnClick(){
-	document.getElementById("fbcloser").style.visibility = "collapse";
-	document.getElementById("facebookpanel").style.visibility = "collapse";
-	document.getElementById("facebookpanel").style.width = "0%";
-}
-
-function twitterOnClick(){
-	fbcloserOnClick();
-	mcloserOnClick();
-	document.getElementById("twitterpanel").style.visibility = "visible";
-	document.getElementById("twitterpanel").style.width = "50%";
-	document.getElementById("tcloser").style.visibility = "visible";
-}
-
-function tcloserOnClick(){
-	document.getElementById("tcloser").style.visibility = "collapse";
-	document.getElementById("twitterpanel").style.visibility = "collapse";
-	document.getElementById("twitterpanel").style.width = "0%";
-}
 
 function mailOnClick(){
-	tcloserOnClick();
-	fbcloserOnClick();
 	document.getElementById("mailpanel").style.visibility = "visible";
 	if(window.innerWidth > 1200)
 		document.getElementById("mailpanel").style.width = "50%";

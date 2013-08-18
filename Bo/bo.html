@@ -7,7 +7,6 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<title>Bo Yang Hu</title>
 		<link type="text/css" rel="stylesheet" href="botest.css">
-		<link type="text/css" rel="stylesheet" href="mobile.css">
 		<script type="text/javascript" src="bo.js"></script>
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
@@ -53,14 +52,7 @@
 			</table>
 		</div>
 		
-		<div id = "facebookpanel" class = "socialpanel">
-			<p id = "fbcloser" onclick = "fbcloserOnClick()">X<p>
-			<iframe id = "fbframe" src="http://www.facebook.com"></iframe>
-		</div>
-		
-		<div id = "twitterpanel" class = "socialpanel">
-			<p id = "tcloser" onclick = "tcloserOnClick()">X<p>
-		</div>
+	
 		
 		<div id = "mailpanel" class = "socialpanel">
 			<p id = "mcloser" onclick = "mcloserOnClick()">X<p>
@@ -173,7 +165,7 @@
 						</div>
 					</div>
 					<div id = "html5" class = "section">
-						<div id = "html5title" class = "sectiontitle"><p id = "html5txt" class = "sectiontxt">5</p></div>
+						<div id = "html5title" class = "sectiontitle"><img id = "html5txt" class = "sectionimg" src = "img/html5.svg"></div>
 						<div id = "html5dis" class = "sectiondis">
 							<p id = "html5about" class = "subdis">crossplatform app development using html5 and css</p>
 							<p id = "html51" class = "subdis">understands the importance of reaching all platforms</p>
@@ -220,93 +212,30 @@
 					<div class = "fifth"></div>
 				</div>
 			</div>
-			
-			<div id = "experiencetitle">Previous Experience</div>
-			<div id = "experience">
-				<table id = "experiencetable">
-					<tr>
-						<td>
-							<div id = "hydratenow" class = "projects" onclick = "hydratenowclick()">
-								<p id = "hydratenowtxt" class = "projecttxt">Hydrate Now Va-ncouver</p>
-								<p id = "hydratenowsubtxt" class = "projectsubtxt">GWT/HTML/CSS3/JAVA/AJAX/JDO/Persistance</p>
-							</div>
-						</td>
-						<td>
-							<div id = "communityplace" class = "projects"  onclick = "cpclick()">
-								<p id = "communityplacetxt" class = "projecttxt">Comm-unity P-lace</p>
-								<p id = "communityplacesubtxt" class = "projectsubtxt">HTML5/CSS3/JavaScript/Cross-Platform APP/Non-Profit</p>
-							</div>
-						</td>
-						<td>
-							<div id = "foodfinder" class = "projects"  onclick = "ffclick()">
-								<p id = "foodfindertxt" class = "projecttxt">UBC Fo-od Find-er</p>
-								<p id = "foodfindersubtxt" class = "projectsubtxt">XML/JAVA/Android App</p>
-							</div>
-						</td>
-						<td>
-							<div id = "alarmclock" class = "projects"  onclick = "alarmclick()">
-								<p id = "alarmclocktxt" class = "projecttxt">The Wo-rst Alar-m Clock Ever Ma-de</p>
-								<p id = "alarmclocksubtxt" class = "projectsubtxt">.NET/WP8/XAML/C#</p>
-							</div>
-						</td>
-						<td>
-							<div id = "resume" class = "projects" onclick = "resumeclick()">
-								<p id = "resumetxt" class = "projecttxt">The Site You are on Now</p>
-								<p id = "resumesubtxt" class = "projectsubtxt">HTML5/CSS3/PHP/AJAX/JavaScript/JQuery/SQL</p>
-							</div>
-						</td>
-					</tr>
-				</table>
-				<div id = "hydratenowdis" class = "projectdis">
-					<p class = "projectcloser" onclick = "showexperience()">X<p>
-					<p id = "hyratenowdistitle" class = "projectdistitle">Hydrate Now Vancouver</p>
-					<img id = "hydratenowimg" class = "projectimg" src = "img/hydratenow.png">
-					<p id = "hyratenowdistxt" class = "projectdistxt">This is a web application made 
-					using the Google Web Toolkit (GWT). The client asked for an intuitive website
-					that geo-located all of the drinking fountains in the metro-Vancouver. For this project
-					my team and I decided to follow the Scrum development process complete with bi-weekly sprints, 
-					user stories, daily stand-ups, and retrospectives. This site primarily target bikers and pedistrians
-					who needed re-hydrate, which is why we implemented two clever search capabilities to find the closest
-					drinking fountain to any point of interest. So go check it out!</p>
-					<p id = "hyratenowdisbutton" class = "projectdisbutton">Check it Out</p>
+			<div id = 'experience'>
+				<div id = 'my' class = 'expHeader'>
+					<div id = "header1_1" class = "exObject"></div>
+					<div id = "header1_2" class = "exObject"></div>
+					<div id = "header1_3" class = "exObject"></div>
+					<p id = "mytxt" class = "exptxt">MY</p>
 				</div>
-				<div id = "cpdis" class = "projectdis">
-					<p class = "projectcloser" onclick = "showexperience()">X<p>
-					<p id = "cpdistitle" class = "projectdistitle">Community Place</p>
-					<img id = "cpimg" class = "projectimg" src = "img/cp.png">
-					<p id = "cpdistxt" class = "projectdistxt"></p>
-					<p id = "cpdisbutton" class = "projectdisbutton">Check it Out</p>
+				<div id = 'previous' class = 'expHeader'>
+					<div id = "header2_1" class = "exObject"></div>
+					<div id = "header2_2" class = "exObject"></div>
+					<div id = "header2_3" class = "exObject"></div>
+					<p id = "pretxt" class = "exptxt">Previous</p>
 				</div>
-				<div id = "ffdis" class = "projectdis">
-					<p class = "projectcloser" onclick = "showexperience()">X<p>
-					<p id = "ffdistitle" class = "projectdistitle">UBC Food Finder</p>
-					<img id = "ffimg" class = "projectimg" src = "">
-					<p id = "ffdistxt" class = "projectdistxt"></p>
-					<p id = "ffdisbutton" class = "projectdisbutton">Check it Out</p>
-				</div>
-				<div id = "alarmdis" class = "projectdis">
-					<p class = "projectcloser" onclick = "showexperience()">X<p>
-					<p id = "alarmdistitle" class = "projectdistitle">Menacing Alarm Clock</p>
-					<img id = "alarmimg" class = "projectimg" src = "">
-					<p id = "alarmdistxt" class = "projectdistxt"></p>
-					<p id = "alarmdisbutton" class = "projectdisbutton">Check it Out</p>
-				</div>
-				<div id = "resumedis" class = "projectdis">
-					<p class = "projectcloser" onclick = "showexperience()">X<p>
-					<p id = "resumedistitle" class = "projectdistitle">Kim and Bo</p>
-					<img id = "resumenowimg" class = "projectimg" src = "">
-					<p id = "resumedistxt" class = "projectdistxt"></p>
-					<p id = "resumedisbutton" class = "projectdisbutton">Check it Out</p>
+				<div id = 'work' class = 'expHeader'>
+					<div id = "header3_1" class = "exObject"></div>
+					<div id = "header3_2" class = "exObject"></div>
+					<div id = "header3_3" class = "exObject"></div>
+					<p id = "worktxt" class = "exptxt">Work</p>
 				</div>
 			</div>
-			<div id = "sep2" class = "skillsendline">
-					<div class = "first"></div>
-					<div class = "second"></div>
-					<div class = "third"></div>
-					<div class = "forth"></div>	
-					<div class = "fifth"></div>
-			</div>
+		
+		
 		</div>
+			
 		<div id = "page3">
 			<div id ="topspacer"></div>
 			<div id ="leftspacer"></div>
@@ -317,7 +246,7 @@
 				<div id = "linkedinbig" class = "socialbig" onclick = "location.href = 'http://www.linkedin.com/pub/bo-hu/76/74/462?trk=tbr';">
 					<div class = "imgspacer"><img id = "linkedinbigpic" class ="socialbigpic" src = "img/linkedin.svg"></div>
 				</div>
-				<div id = "mailbig" class = "socialbig">
+				<div id = "mailbig" class = "socialbig" onclick = "mailOnClick()">
 					<div class = "imgspacer"><img id = "mailbigpic" class ="socialbigpic" src = "img/envelope.svg"></div>
 				</div>
 			</div>
