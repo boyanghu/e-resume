@@ -3,10 +3,7 @@
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Rosarivo' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>	
-		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
 
 <link href='http://fonts.googleapis.com/css?family=Arapey' rel='stylesheet' type='text/css'>
 		<title>Kimberley Chen</title>
@@ -14,37 +11,23 @@
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 		<!-- CSS Files -->
 		<link type="text/css" rel="stylesheet" href="Kim3.css">
-		
+
 		<script>
 			function menuopen(element){
 				document.getElementById(element).style.opacity = "1";
 				document.getElementById(element).style.zIndex = "10";
-				
+
 			}
 			function menuclose(element){
 				document.getElementById(element).style.opacity = "0";
 				document.getElementById(element).style.zIndex = "-2";
-				
-			}
-
-			function classopen(var1, var2, var3, var4)
-			{
-				document.getElementById(var1).style.opacity = "1";
-				document.getElementById(var1).style.zIndex = "10";
-				document.getElementById(var2).style.opacity = "1";
-				document.getElementById(var2).style.zIndex = "10";
-				document.getElementById(var3).style.opacity = "1";
-				document.getElementById(var3).style.zIndex = "10";
-				document.getElementById(var4).style.opacity = "1";
-				document.getElementById(var4).style.zIndex = "10";
 
 			}
-			
 
-		
+
 		</script>
-	</head>
 
+	</head>
 	<body>
 	<div id ="background"></div>
 <div id = "page1">	
@@ -54,12 +37,12 @@
 	</div>
 </div>
 </div>
-	
 
-	
+
+
 	<div id = "secondpage" >
-		
-		
+
+
 			<div id = "about" class = "tag" onclick = "menuopen('aboutme')">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">
@@ -75,14 +58,15 @@
 				<p id="blogtxt" class="menutxt" >LinkedIn</p>
 				</div>
 			</div>
-			<div id = "skills" class = "tag" onclick = "menuopen('skillsme')">
+
+			<div id = "skills" class = "tag">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">				
 				<img id="aboutimg" class="menuimg" src = "calculate.svg">				
 				<p id="skillstxt" class="menutxt" >Skills</p>
 			 	</div>
 			</div>
-			
+
 			<div id = "contact" class = "tag" onclick = "menuopen('contactme')">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">
@@ -91,22 +75,31 @@
 				</div>
 			</div>
 
-	
-<div id = "aboutme" class = "sub" >
+			<div id = "aboutme" class = "sub" >
 				<div id = "backgroundabout"> </div>
 				<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')"> 		
-				<div >
-					<div id="imageholder3" class = "imageholder"> <img id = "aboutpic3">  <p id ="hobbies"> Hobbies </p>  </div> 
-
-					<p id = "titleabout" onclick = "classopen('imageholder3','imageholder1','imageholder2','imageholder4')"> <font size="10">Kimberley Chen</font></p>
-				    <div id="imageholder1" class = "imageholder"> <img id = "aboutpic1"> <p id = "personality"> Personality </p></div>
-					<div id="imageholder2" class = "imageholder" > <img id = "aboutpic2">  </div>
-					<div id="imageholder4" class = "imageholder"> <img id = "aboutpic4"> <p id = "mymajor"> Major </p> </div>
-					
+				<div>
+					<p id = "title"> <font size="6">About Me </font></p>
+					<div id = "topleft" > <font size="5"> MY MAJOR</font></div> 
+						<img id = "majorcpsc" class = "placeholder" src = "cpsc.svg" TITLE="Year 3">
+						<img id = "majorstat" class = "placeholder" src = "stats.svg" TITLE="Year 3">
+						<p id ="cpsctxt"> <font size="5">Computer Science</font> </p> 
+						<p id ="stattxt"> <font size="5">Statistics </font></p> 
 					</div>
-							
-	</div>
+					</div>
+
+					<div id = "secondpageabout" class = "sub">
+						<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')"> 
+
+
+				</div>
+
+
+
+
+
 </div>
+
 <div id = "contactme" class = "sub">
 	<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
 	<form id = "mailform" action = "mail.php" method = "post">
@@ -120,24 +113,12 @@
 						<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
 					</div>
 					<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
-					
+
 				</form>
-				
+
 	</div>
 
-
-
-<div id = "skillsme" class="sub">
-			<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skills')"> 
-	</div>
 </div>
-
-
-
-
-
-
 </body>
-	
-</html>
 
+</html>

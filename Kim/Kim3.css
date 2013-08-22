@@ -253,8 +253,8 @@ body {
 	top:-100%;
 	opacity:0;
 	z-index: -2;
-	
 }
+
 #contactcloser{
 	width:2em;
 	float:right;
@@ -270,7 +270,13 @@ body {
 	opacity:1;
 	cursor:pointer;
 }
-
+#skillsme{
+	background-color:#f6aa93;
+	overflow:hidden;
+	top:-100%;
+	opacity:0;
+	z-index: -2;
+}
 #aboutpara{
 	width:20em;
 	height:30em;
@@ -282,33 +288,96 @@ body {
 	color: #323232;
 }
 
-#title{
-	font-family: 'Cutive Mono', serif;
+#titleabout{
+	font-family: 'Rosarivo', serif;
 	position: auto;
-	margin-top:3em;
-	size:3;
+	margin-top:8em;
+	margin-left:20em;
+	position:auto;
 	
+}
+
+#titleabout:hover{
+	cursor:pointer;
+	font-weight:bold;
 }
 
 #topleft{
 	font-family: 'Cutive Mono', serif;
-	margin-top:-15em;
+	margin-top:-10m;
 	margin-left:1em;
 	color:#323232;
-	
+
 	
 }
 
+.imageholder{
+	border-radius:50%;
+	border:2px solid black;
+	background-color:rgba(255,255,255,.5);
+	opacity:0;
+}
 
-#majorcpsc{
-	width:8em;
-	height:8em;
-	overflow:hidden;
-	margin-left:5em;
+#imageholder1{
+	width:11em;
+	height:11em;
+	margin-top:-12em;
+	margin-left:3em;
+
+}
+
+
+
+#imageholder2{
+	width:10em;
+	height:10em;
 	margin-top:2em;
-	
-	
+	margin-left:10em;
+
 }
+
+#imageholder3{
+	width:12em;
+	height:12em;
+	margin-left:14em;
+	margin-top:2em;
+}
+
+#imageholder4{
+	width:10em;
+	height:10em;
+	margin-left:16em;
+	margin-top:-7em;
+
+}
+
+#aboutpic1{
+	width:5em;
+	margin-left:25%;
+	margin-top:25%;
+}
+
+#hobbies{
+	margin-left:8em;
+	margin-top:2em;
+	font-family: 'Special Elite', cursive;
+	font-size:30px;
+}
+#personality{
+	margin-left:7em;
+	margin-top:1em;
+	font-family: 'Special Elite', cursive;
+	font-size:30px;
+}
+#mymajor{
+	margin-left:7em;
+	margin-top:1em;
+	font-family: 'Special Elite', cursive;
+	font-size:30px;
+}
+
+/*
+
 #majorcpsc:hover{
 	width:9em;
 	height:9em;
@@ -330,7 +399,7 @@ body {
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	}
-	
+
 #cpsctxt{
 	font-family: 'Cutive Mono', serif;
 	margin-top:0.5em;
@@ -344,6 +413,7 @@ body {
 	margin-top:-1.5em;
 }
 
+*/
 #bottomleft{
 	font-family: 'Cutive Mono', serif;
 	margin-left:1em;
@@ -355,10 +425,25 @@ body {
 	width:100%;
 	height: 100%;
 	position:absolute;
+	top:0;
 	background-attachment:fixed;
-	background-image: url("no pink flower 4.png");
+	background-image: url("kimbo2.jpg");
 	background-size: cover;
     background-repeat: no-repeat;
-	z-index:-1;
+    z-index:-1;
+
 	
+}
+
+.bubblestxt{
+	border:2px solid black;
+	width:15em;
+	font-family: 'Lora', serif;
+	font-size:20px;
+	opacity: 0;
+}
+
+#hobbiestxt{
+	margin-top:-28em;
+	margin-left:33em;
 }
