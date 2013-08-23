@@ -7,8 +7,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Rosarivo' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>	
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
 
-<link href='http://fonts.googleapis.com/css?family=Arapey' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arapey' rel='stylesheet' type='text/css'>
 		<title>Kimberley Chen</title>
 		<!--favicon-->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
@@ -43,23 +44,17 @@
 
 		
 		</script>
-	</head>
+</head>
 
-	<body>
+<body>
 	<div id ="background"></div>
-<div id = "page1">	
+	<div id = "page1">	
 	<div class = "spacer" ></div>
         <div id = "title">
 		<p id = "kim" >KIM</p>
 	</div>
-</div>
-</div>
-	
-
-	
-	<div id = "secondpage" >
-		
-		
+	</div>
+    <div id = "secondpage" >
 			<div id = "about" class = "tag" onclick = "menuopen('aboutme')">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">
@@ -67,74 +62,70 @@
 					<p id = "abouttxt" class="menutxt" >About Me </p>  
 				</div>
 			</div>
-
 			<div id = "blog" class = "tag" onclick = "location.href = 'http://lnkd.in/TUH3yz'">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">				
-				<img id="aboutimg" class="menuimg" src = "in.svg">				
-				<p id="blogtxt" class="menutxt" >LinkedIn</p>
+					<img id="aboutimg" class="menuimg" src = "in.svg">				
+					<p id="blogtxt" class="menutxt" >LinkedIn</p>
 				</div>
 			</div>
 			<div id = "skills" class = "tag" onclick = "menuopen('skillsme')">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">				
-				<img id="aboutimg" class="menuimg" src = "calculate.svg">				
-				<p id="skillstxt" class="menutxt" >Skills</p>
+					<img id="aboutimg" class="menuimg" src = "calculate.svg">				
+					<p id="skillstxt" class="menutxt" >Skills</p>
 			 	</div>
 			</div>
-			
 			<div id = "contact" class = "tag" onclick = "menuopen('contactme')">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">
-				<img id="aboutimg" class="menuimg" src = "envelope.svg">				
-				<p id="contacttxt" class="menutxt" >Contact Me</p>
+					<img id="aboutimg" class="menuimg" src = "envelope.svg">				
+					<p id="contacttxt" class="menutxt" >Contact Me</p>
 				</div>
 			</div>
 
 	
-<div id = "aboutme" class = "sub" >
+			<div id = "aboutme" class = "sub" >
 				<div id = "backgroundabout"> </div>
-				<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')"> 		
-				<div >
+					<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')"> 		
+				
 					<div id="imageholder3" class = "imageholder"> <img id = "aboutpic3">  <p id ="hobbies"> Hobbies </p>  </div> 
-
 					<p id = "titleabout" onclick = "classopen('imageholder3','imageholder1','imageholder2','imageholder4')"> <font size="10">Kimberley Chen</font></p>
 				    <div id="imageholder1" class = "imageholder"> <img id = "aboutpic1"> <p id = "personality"> Personality </p></div>
 					<div id="imageholder2" class = "imageholder" > <img id = "aboutpic2">  </div>
 					<div id="imageholder4" class = "imageholder"> <img id = "aboutpic4"> <p id = "mymajor"> Major </p> </div>
-					
-					</div>
-							
-	</div>
-</div>
-<div id = "contactme" class = "sub">
-	<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
-	<form id = "mailform" action = "mail.php" method = "post">
-			<div id = "frommail">
-			  <p id = "from" class = "heading">From:</p>
-					<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
-					<div id = "email"><input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail"></input></div>
-					</div>
-			<div id = "messagemail">
-				<p id = "message" class = "heading">Message:</p>
+			</div>
+				
+			<div id = "contactme" class = "sub">
+					<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
+					<p id = "emailme" class = "me"> Send me an Email </p>
+					<form id = "mailform" action = "mail.php" method = "post">
+						<div id = "frommail">
+						<p id = "from" class = "heading">From:</p>
+						<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
+						<div id = "email"><input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail"></input></div>
+						</div>
+					<div id = "messagemail">
+						<p id = "message" class = "heading">Message:</p>
 						<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
 					</div>
 					<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
-					
-				</form>
-				
-	</div>
+					</form>
+					<div id = 'contact_line'></div>
+						<p id = "or"> OR </p>
+					<div id = "icons">
+						<img id = "fbme" class = "contacticons" src = "facebook.svg" onclick = "location.href = 'https://www.facebook.com/kimberleywanchen.chen?'">
+						<img id = "instame" class = "contacticons" src = "instagram.svg" onclick = "location.href = 'http://instagram.com/kimmiexoxo'">
+					</div>
+			</div>
+	
 
 
 
-<div id = "skillsme" class="sub">
-			<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skills')"> 
-	</div>
+			<div id = "skillsme" class="sub">
+					<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skills')"> 
+			</div>
 </div>
-
-
-
-
 
 
 </body>
