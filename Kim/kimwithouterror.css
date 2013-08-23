@@ -1,0 +1,567 @@
+/*$green:#b9d3b0;
+$turqoise:#81bda4;
+$brown:#b28774;
+$red:#f88f79;
+$pink:#f6aa93;
+*/
+   
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+html {
+	height: 100%;
+}
+body {
+
+	width:100%;
+	height: 100%;
+	overflow-x:hidden;
+
+
+}
+
+#background{
+	width:100%;
+	height: 100%;
+	position:fixed;
+	top:0;
+	/*background-image: url("img/grey_wash_wall.png");*/
+	background-attachment:fixed;
+	background-image: url("flowersbw.png");
+	background-size: cover;
+    background-repeat: no-repeat;
+	z-index:-1;
+
+}
+
+#title{
+	width: 40em;
+	height: 20em;
+	z-index:10;
+	position: relative;
+	margin:auto;
+	top:-10em;
+	line-height:20em;
+	text-align:center;
+
+
+}
+#page1{
+	background-color: rgba(125,94,81,0.6);
+	height:100%;
+	width:100%;
+	position:relative:
+	overflow:hidden;
+	z-index:10;
+
+}
+.spacer{
+	width:100%;
+	height: 50%;
+	position:relative;
+	overflow:visible;
+
+
+}
+
+#kim{
+	font-family: 'Arapey', serif;
+	color: 	#f6aa93;
+	font-size:20em;
+	margin:auto;
+	text-shadow: 10px 3px 0 rgba(185,211,176,1);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+
+}
+
+
+#secondpage{
+	width: 100%;
+	height: 100%;	
+	overflow: hidden;
+	position:relative;
+	bottom:0;
+
+}
+
+#about{
+	width:50%;
+	height:50%;
+	float:left;
+	background-color: #b9d3b0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+
+}
+
+#about:hover{
+	cursor:pointer;
+	background-color: rgba(185,211,176,0.7);
+
+
+}
+#blog{
+	width:50%;
+	height:50%;
+	float:right;
+	background-color: #81bda4;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;	
+}
+
+#blog:hover{
+	cursor:pointer;
+	background-color: rgba(129,189,164,0.7);
+}
+#skills{
+	width:50%;
+	height:50%;
+	float:left;
+	background-color:#f88f79;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+
+}
+
+#skills:hover{
+	cursor:pointer;
+	background-color: rgba(248,143,121,0.7);
+}
+#contact{
+	width:50%;
+	height:50%;
+	float:right;
+	background-color:#f6aa93;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+#contact:hover{
+	cursor:pointer;
+	background-color: rgba(246,170,147,0.7);
+}
+
+.menutxt{
+	font-family: 'Arapey', serif;
+	color:#323232;
+	font-size:2em;
+	margin-top:0.5em;
+
+
+
+}
+.menuimg{
+
+	width:5em;
+
+}
+
+.menuitem{
+	width:10em;
+	height:8em;
+	margin:auto;
+	margin-top:-4em;
+	text-align:center;
+
+}
+.sub{
+	width:100%;
+	height:100%;
+	overflow:auto;
+	position: relative;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+#aboutme{
+	background-color:#b9d3b0;
+	overflow:hidden;
+	top:-100%;
+	opacity:0;
+	z-index: -2;
+}
+
+#aboutcloser{
+	width:2em;
+	float:right;
+	margin-top:2em;
+	margin-right:2em;
+	opacity:0.7;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+}
+#aboutcloser:hover{
+	opacity:1;
+	cursor:pointer;
+}
+
+
+#backgroundabout{
+	width:100%;
+	height: 100%;
+	position:absolute;
+	top:0;
+	background-attachment:fixed;
+	background-image: url("kimbo2.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    z-index:-1;
+
+	
+}
+
+.bubblestxt{
+	border:2px solid black;
+	width:15em;
+	font-family: 'Lora', serif;
+	font-size:20px;
+	opacity: 0;
+}
+
+#hobbiestxt{
+	margin-top:-28em;
+	margin-left:33em;
+}
+
+
+#contactme{
+	background-color:#f6aa93;
+	overflow:hidden;
+	top:-100%;
+	opacity:0;
+	z-index: -2;
+
+}
+#contactcloser{
+	width:2em;
+	float:right;
+	margin-top:2em;
+	margin-right:2em;
+	opacity:0.7;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+
+}
+#contactcloser:hover{
+	opacity:1;
+	cursor:pointer;
+}
+
+#titleabout{
+	font-family: 'Rosarivo', serif;
+	position: auto;
+	margin-top:8em;
+	margin-left:20em;
+	position:auto;
+	
+}
+
+#titleabout:hover{
+	cursor:pointer;
+	font-weight:bold;
+}
+
+#topleft{
+	font-family: 'Cutive Mono', serif;
+	margin-top:-10m;
+	margin-left:1em;
+	color:#323232;
+
+	
+}
+
+.imageholder{
+	border-radius:50%;
+	border:2px solid black;
+	background-color:rgba(255,255,255,.5);
+	opacity:0;
+}
+
+#imageholder1{
+	width:11em;
+	height:11em;
+	margin-top:-12em;
+	margin-left:3em;
+
+}
+
+
+
+#imageholder2{
+	width:10em;
+	height:10em;
+	margin-top:2em;
+	margin-left:10em;
+
+}
+
+#imageholder3{
+	width:12em;
+	height:12em;
+	margin-left:14em;
+	margin-top:2em;
+}
+
+#imageholder4{
+	width:10em;
+	height:10em;
+	margin-left:16em;
+	margin-top:-7em;
+
+}
+
+#aboutpic1{
+	width:5em;
+	margin-left:25%;
+	margin-top:25%;
+}
+
+#hobbies{
+	margin-left:8em;
+	margin-top:2em;
+	font-family: 'Special Elite', cursive;
+	font-size:30px;
+}
+#personality{
+	margin-left:7em;
+	margin-top:1em;
+	font-family: 'Special Elite', cursive;
+	font-size:30px;
+}
+#mymajor{
+	margin-left:7em;
+	margin-top:1em;
+	font-family: 'Special Elite', cursive;
+	font-size:30px;
+}
+#mailform{
+	
+	margin-top:1em;
+	margin-left:4em;
+	overflow:hidden;
+}
+
+.input{
+	height:3em;
+	width:30em;
+	font-size:1em;
+	background-color:rgba(255,255,255,0.8);
+	
+
+}
+
+.input:focus{
+	outline:none;
+	
+}
+#messageinput{
+	height:16em;
+	width:30em;
+	font-size:1em;
+	background-color:rgba(255,255,255,0.8);
+	
+}
+#messageinput:focus{
+	outline:none;
+}
+.me{
+	font-family: 'The Girl Next Door', cursive;
+	font-size: 3em;
+}
+
+#emailme{
+	margin-top:2em;
+	margin-left:1.4em;
+}
+
+.heading{
+	font-family: 'The Girl Next Door', cursive;
+	font-size:1.5em;
+}
+#messagemail{
+	margin-top:1.2em;
+}
+
+#contact_line{
+	position: absolute;
+	left:50%;
+	height:25em;
+	width:2px;
+	background-color:#323232;
+	margin-top: -30em;
+
+
+}
+
+#or{
+	position: relative;
+	font-family: 'The Girl Next Door', cursive;
+	font-size:2em;
+	margin-left:50%;
+	left:-0.5em;
+	margin-top: -10em;
+	width:1.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	background-color: #f6aa93;
+}
+.contacticons{
+	width:10em;
+	height:10em;
+	opacity: 0.8;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+.contacticons:hover{
+	opacity:1;
+
+
+}
+#fbme{
+	margin-left:60em;
+	position:relative;
+	top:-14em;
+	width:12em;
+	height:12em;
+}
+
+#instame{
+	margin-left:-11em;
+}
+
+#sendbutton{
+	font-family: 'The Girl Next Door', cursive;
+	font-size:1.4em;
+	width:10em;
+	height:3em;
+	background-color:rgba(255,255,255,0.8);
+	
+	margin-left:0em;
+	margin-top:1em;
+}
+
+
+#aboutpara{
+	width:20em;
+	height:30em;
+	position:relative;
+	top:-32em;
+	left:25em;
+	font-family: 'Cutive Mono', serif;
+	font-size: 1.2em;
+	color: #323232;
+}
+
+#title{
+	font-family: 'Cutive Mono', serif;
+	position: auto;
+	margin-top:3em;
+	size:3;
+
+}
+#backgroundabout{
+	width:100%;
+	height: 100%;
+	position:absolute;
+	top:0;
+	background-attachment:fixed;
+	background-image: url("kimbo2.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    z-index:-1;
+
+	
+}
+
+.bubblestxt{
+	border:2px solid black;
+	width:15em;
+	font-family: 'Lora', serif;
+	font-size:20px;
+	opacity: 0;
+}
+
+#hobbiestxt{
+	margin-top:-28em;
+	margin-left:33em;
+}
+
+#topleft{
+	font-family: 'Cutive Mono', serif;
+	margin-top:-15em;
+	margin-left:1em;
+	color:#323232;
+
+
+#bottomleft{
+	font-family: 'Cutive Mono', serif;
+	margin-left:1em;
+	margin-top:2em;
+}
+
+
+#backgroundabout{
+	width:100%;
+	height: 100%;
+	position:absolute;
+	background-attachment:fixed;
+	background-image: url("no pink flower 4.png");
+	background-size: cover;
+    background-repeat: no-repeat;
+	z-index:-1;
+
+}
