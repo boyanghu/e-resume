@@ -76,7 +76,7 @@
 				</div>
 			</div>
 
-			<div id = "skills" class = "tag">
+			<div id = "skills" class = "tag" onclick = "menuopen('skillsme')">
 				<div class = "spacer" ></div>				
 				<div class="menuitem">				
 				<img id="aboutimg" class="menuimg" src = "calculate.svg">				
@@ -104,14 +104,8 @@
 
 				</div>
 
-
-
-
-
-</div>
-
-<div id = "contactme" class = "sub">
-	<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
+		<div id = "contactme" class = "sub">
+				<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
 					<p id = "emailme" class = "me"> Send me an Email </p>
 					<form id = "mailform" action = "mail.php" method = "post">
 						<div id = "frommail">
@@ -132,7 +126,12 @@
 						<img id = "instame" class = "contacticons" src = "instagram.svg" onclick = "location.href = 'http://instagram.com/kimmiexoxo'">
 					</div>
 
-	</div>
+		</div>
+		<div id = "skillsme" class = "sub">
+				<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skillsme')"> 
+				
+
+		</div>
 
 </div>
 </body>
