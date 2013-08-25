@@ -41,6 +41,22 @@
 
 			}
 			
+			function scrollWindow()
+			{
+				window.scrollTo(findPos(document.getElementById('project')),0);
+			}
+
+			function findPos(obj)
+			{
+				var curtop = 0;
+  				  if (obj.offsetParent) {
+        		do {
+            		curtop += obj.offsetTop;
+        			} while (obj = obj.offsetParent);
+    			return [curtop];
+   				 }
+				}
+	
 
 		</script>
 
@@ -129,11 +145,29 @@
 		</div>
 		<div id = "skillsme" class = "sub">
 				<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skillsme')"> 
-				
+				<div id = "techskills">
+					<p id = "techtxt"> Technical Skills </p>
+					<div id = "arrowright">
+						<img id = "arrowrightimg" src = "arrow.svg" onclick = "scrollWindow()">
+					</div>
+				</div>
+				<div id = "project">
+					<p id ="proj"> Projects I've Worked On </p>
+					<div id = "projboxes">
+						<div id = "now" class = "boxes"><img id = "kimsite"> </div>
+						<div id = "music" class = "boxes"><img id = "musicstore"></div>	
+						<div id = "andriod" class = "boxes"></div>
+					</div>
+					<p id = "nowtxt" class = "skilltxt"> Site You Are On </p> 
+					<p id = "musictxt" class = "skilltxt"> Allegro Music Store </p>
+					<p id = "andriodtxt" class = "skilltxt"> Andriod Web App </p> 
+					
+				</div>
 
 		</div>
+	</div>
 
-</div>
+
 </body>
 
 </html>

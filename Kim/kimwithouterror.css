@@ -276,7 +276,7 @@ body {
 
 
 #contactme{
-	background-color:#f88f79;
+	background-color:#f6aa93;
 	overflow:hidden;
 	position:fixed;
 	top:0;
@@ -303,17 +303,23 @@ body {
 #skillsme{
 	background-color:#f88f79;
 	overflow:hidden;
-	position:fixed;
+	position:absolute;
 	top:0;
-	opacity:0;
-	z-index: -2;
+	bottom:0;
+	left:0;
+	right:0;
+	opacity:1;
+	
+	
 
 }
+/*
+
 #skillscloser{
 	width:2em;
 	float:right;
 	margin-top:2em;
-	margin-right:2em;
+	margin-right:5em;
 	opacity:0.7;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -324,6 +330,8 @@ body {
 	opacity:1;
 	cursor:pointer;
 }
+
+*/
 
 #titleabout{
 	font-family: 'Rosarivo', serif;
@@ -570,7 +578,7 @@ body {
 	margin-top:-15em;
 	margin-left:1em;
 	color:#323232;
-
+}
 
 #bottomleft{
 	font-family: 'Cutive Mono', serif;
@@ -579,14 +587,137 @@ body {
 }
 
 
-#backgroundabout{
-	width:100%;
-	height: 100%;
+#project{
+	
 	position:absolute;
-	background-attachment:fixed;
-	background-image: url("no pink flower 4.png");
-	background-size: cover;
-    background-repeat: no-repeat;
-	z-index:-1;
+	right:0;
+	top:0;
+	left:100%;
+	bottom:0;
+	border:2px solid black;
+	width:100%;
+
+	
+	
+}
+#techskills{
+	position:absolute;
+	top:0;
+	right:100%;
+	left:0;
+	bottom:0;
+	width:100%;
+}
+
+#arrowright{
+	height:110%;
+	width:4em;
+	position:absolute;
+	right:0;
+	background-color:#b28774;
+	margin-top:-3.5em;
+	
+}
+
+
+#arrowrightimg{
+	width:3em;
+	position: absolute;
+	top:50%;
+	margin-left:1em;
+	opacity:0.5;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	z-index: 10;
 
 }
+
+#arrowrightimg:hover{
+	margin-left:1.5em;
+	opacity:1;
+}
+
+
+
+#proj{
+	
+	font-family: 'Lora', serif;
+	font-size:3em;
+	margin-left:30%;
+	margin-top:1em;
+}
+
+#projboxes{
+	width:80em;
+	height:20em;
+	margin:auto;
+	position:relative;
+	
+	margin-top:4em;
+}
+.boxes{
+	width:24em;
+	height:20em;
+	opacity:0.8;
+}
+
+.boxes:hover{
+	opacity:1;
+}
+
+#now{
+	background-color:#b9d3b0;
+	margin-left:1em;
+}
+#music{
+	background-color: #b28774;
+	margin-left:28em;
+	margin-top:-20em;
+
+}
+#andriod{
+	background-color: #81bda4;
+	margin-left:55em;
+	margin-top:-20em;
+}
+
+.skilltxt{
+	font-family: 'Lora', serif;
+	font-size:1.5em;
+}
+
+#nowtxt{
+	text-align: left;
+	margin-left:5em;
+	margin-top: 2em;
+
+}
+
+#musictxt{
+	text-align: center;
+	margin-top:-1em;
+}
+
+#andriodtxt{
+	text-align: right;
+	margin-top:-1em;
+	margin-right:5em;
+}
+
+#kimsite{
+	background-image: url("kimsite.png");
+	width:100%;
+	height:100%;
+
+}
+
+#musicstore{
+	background-image: url("musicstore.png");
+	width:100%;
+	height:100%;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
