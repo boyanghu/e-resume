@@ -41,22 +41,43 @@
 
 			}
 			
+			
+			
+
 			function scrollWindow()
 			{
-				window.scrollTo(findPos(document.getElementById('project')),0);
+				document.getElementById('projkim').style.display='none';
+				document.getElementById('projallegro').style.marginLeft='0';
 			}
 
-			function findPos(obj)
+			function scrollWindow2()
 			{
-				var curtop = 0;
-  				  if (obj.offsetParent) {
-        		do {
-            		curtop += obj.offsetTop;
-        			} while (obj = obj.offsetParent);
-    			return [curtop];
-   				 }
-				}
-	
+				document.getElementById('projkim').style.display='inline';
+				document.getElementById('projallegro').style.marginLeft='100%';
+			}
+
+			function scrollWindow3()
+			{
+				document.getElementById('projallegro').style.display='none';
+				document.getElementById('projandroid').style.marginLeft='0';
+			}
+			function scrollWindow4()
+			{
+				document.getElementById('projallegro').style.display='inline';
+				document.getElementById('projandroid').style.marginLeft='100%';
+			}
+			function scrollWindow5()
+			{
+				document.getElementById('backgroundabout').style.display='none';
+				document.getElementById('hobbiespage').style.marginLeft='0';
+			}
+
+			function scrollWindow6()
+			{
+				document.getElementById('backgroundabout').style.display='inline';
+				document.getElementById('hobbiespage').style.marginLeft='100%';
+			}
+			
 
 		</script>
 
@@ -109,16 +130,36 @@
 			</div>
 
 			<div id = "aboutme" class = "sub" >
-				<div id = "backgroundabout"> </div>
-					<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')"> 		
-				
-					<div id="imageholder3" class = "imageholder"> <img id = "aboutpic3">  <p id ="hobbies"> Hobbies </p>  </div> 
-					<p id = "titleabout" onclick = "classopen('imageholder3','imageholder1','imageholder2','imageholder4')"> <font size="10">Kimberley Chen</font></p>
-				    <div id="imageholder1" class = "imageholder"> <img id = "aboutpic1"> <p id = "personality"> Personality </p></div>
-					<div id="imageholder2" class = "imageholder" > <img id = "aboutpic2">  </div>
-					<div id="imageholder4" class = "imageholder"> <img id = "aboutpic4"> <p id = "mymajor"> Major </p> </div>
+					<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')">
+				<div id = "backgroundabout">
+					<img id = "backgroundaboutpic" src = "kimmy.jpg">
+					<p id = "titleabout"> <font size = 6>System.out.println("About Me"); </font></p>
+					<p id = "welcometxt"> Hi there, welcome to my e-resume! My name is Kimberley Chen, I am a 3rd year undergraduate student at the University of British Columbia majoring in Computer Science and Statistics. I am interested in data analysis and data mining. </p>
+				    <div id = "arrowright3">
+						<img id = "arrowright3img" src = "arrow.svg" onclick = "scrollWindow5()">
+					</div>
 
 				</div>
+				
+			
+				<div id = "hobbiespage">
+					<div id = "arrowleft3">
+						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow6()">
+					</div>
+					<div id = "hobbieswords">
+						<div id = "hobbiesline1" > My Hobbies </div>
+						<div id = "hobbiesline2"> I own a peruvian guinea pig named Blondie and she has long white hair. I spend a lot of my time playing and grooming her and she brings me so much joy. Also, I enjoy cooking and trying many different food. </div>
+					</div>
+					<div id = "hobbiespics">
+						<img id = "hobbiespic1" class = "hobbiespic" src = "first.jpg">
+						<img id = "hobbiespic2" class = "hobbiespic" src = "second.jpg">
+						<img id = "hobbiespic3" class = "hobbiespic" src = "four.jpg">
+					</div>
+					<div id = "piccredits"> Picture collage from PicMonkey </div>
+
+			</div>
+		</div>
+		
 
 		<div id = "contactme" class = "sub">
 				<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
@@ -144,25 +185,39 @@
 
 		</div>
 		<div id = "skillsme" class = "sub">
-				<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skillsme')"> 
-				<div id = "techskills">
-					<p id = "techtxt"> Technical Skills </p>
+			<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skillsme')"> 
 					<div id = "arrowright">
-						<img id = "arrowrightimg" src = "arrow.svg" onclick = "scrollWindow()">
+						<img class = "arrowrightimg" src = "arrow.svg" onclick = "scrollWindow()">
 					</div>
+					<div id = "projkimboxes" class="dpbox"> </div> 
+					<div id = "kimnextcircle" class="projcircles"> Next </div>
+					<div id = "kimbackcircle" class="projcircles"> Back </div>
+
+
+				<div id = "projkim">
+					<p id ="projkimtxt"> Kim's e-resume</p>
 				</div>
-				<div id = "project">
-					<p id ="proj"> Projects I've Worked On </p>
-					<div id = "projboxes">
-						<div id = "now" class = "boxes"><img id = "kimsite"> </div>
-						<div id = "music" class = "boxes"><img id = "musicstore"></div>	
-						<div id = "andriod" class = "boxes"></div>
+				<div id = "projallegro">
+					<p id ="projallegrotxt"> Allegro Music Store </p>
+					<div id = "arrowleft">
+						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow2()">
 					</div>
-					<p id = "nowtxt" class = "skilltxt"> Site You Are On </p> 
-					<p id = "musictxt" class = "skilltxt"> Allegro Music Store </p>
-					<p id = "andriodtxt" class = "skilltxt"> Andriod Web App </p> 
-					
+					<div id = "arrowrighttwo">
+						<img id = "arrowrighttwoimg" src = "arrow.svg" onclick = "scrollWindow3()">
+					</div>
+					<div id = "projallegroboxes" class="dpbox"> </div> 
+					<div id = "allegronextcircle" class="projcircles"> Next </div>
+					<div id = "allegrobackcircle" class="projcircles"> Back </div>
 				</div>
+				<div id = "projandroid">
+					<p id = "projandroidtxt"> UBC WayFinder Android Application </p>
+					<div id = "arrowlefttwo">
+						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow4()">
+					</div>
+					<div id = "projandroidboxes" class="dpbox"> </div> 
+					<div id = "androidnextcircle" class="projcircles"> Next </div>
+					<div id = "androidbackcircle" class="projcircles"> Back </div>
+				</div>					
 
 		</div>
 	</div>
