@@ -273,8 +273,9 @@ body {
    	width:25em;
    	height:31em;
     background-size: 100%;
-    margin-left:5em;
-    margin-top:8em;
+    margin-top:1em;
+    float:left;
+    margin-left:1em;
     -webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -282,17 +283,19 @@ body {
 }
 
 #backgroundaboutpic:hover{
-	transform:rotate(-5deg);
-	-ms-transform:rotate(-5deg); /* IE 9 */
-	-webkit-transform:rotate(-5deg); /* Safari and Chrome */
+	transform:rotate(-3deg);
+	-ms-transform:rotate(-3deg); /* IE 9 */
+	-webkit-transform:rotate(-3deg); /* Safari and Chrome */
 
 }
 #welcometxt{
-	width:31em;
-	height:27em;
-	margin-left:32em;
+	width:27em;
+	height:25em;
+	margin-left:20em;
+	font-family: 'Cutive Mono', serif;
+	font-size: 1.4em;
+	line-height: 1.5em;
 	margin-top:1em;
-	background-color:#81bda4;
 }
 .bubblestxt{
 	border:2px solid black;
@@ -368,10 +371,11 @@ body {
 
 
 #titleabout{
+	margin-left:7em;
+	font-family: 'Cutive Mono', serif;
+	font-size:2.5em;
+	margin-top:0.5em;
 	
-	margin-left:32em;
-	margin-top:-31em;
-	font-family: 'Rosarivo', serif;
 
 }
 
@@ -1006,64 +1010,50 @@ body {
 }
 
 #hobbiesline1{
-	font-family: 'Rosarivo', serif;
-	font-size:2em;
+	font-family: 'Cutive Mono', serif;
+	font-size:3em;
+	margin-left:0em;
+	margin-bottom: 1em;
 	margin-top:1em;
-	margin-left:1em;
 }
 
 #hobbiesline2{
-	font-family: 'Rosarivo', serif;
-	
+	font-family: 'Cutive Mono', serif;
 	width:15em;
-	height:30em;
-	margin-left:1em;
-	background-color:#b9d3b0;
+	height:15em;
+	font-size: 1.5em;
+	line-height: 1.3em;
 }
 
 #backgroundabout{
-	width:100%;
-	height:100%;
+	width:77em;
+	margin:auto;
+	height:80%;
+	margin-top:5%;
+	overflow: auto;
 	
 }
 
-
-#hobbieswords{
-	margin-left:5em;
-	margin-top:5em;
-}
 
 #hobbiespics{
 	
-	width:40em;
+	width:50em;
 	height:30em;
-	margin-left:30em;
+	float: right;
 	margin-top:-30em;
+
 }
 
 .hobbiespic{
 	width:50em;
-
-
-}
-
-#hobbiespic1{
-	margin-top:-2em;
-	margin-left:-5em;
-}
-
-#hobbiespic2{
-	margin-top:-1em;
-	margin-left:-5em;
+	margin-top: -0.6em;
 
 }
 
-#hobbiespic3{
-	margin-top:-1em;
-	margin-left:-5em;
+#hobby{
+	width:75em;
+	margin:auto;
+	height:80%;
+	margin-top: 5%;
+	overflow: auto;
 }
-
-#piccredits{
-	margin-left:6em;
-}
-
