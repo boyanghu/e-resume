@@ -338,7 +338,7 @@ body:hover{
 	
 }
 #mailpanel{
-	visibility:collapse;
+	display:none;
 	width: 0%;
 	background-color: rgba(137,104,205,1);
 	z-index:1000;
@@ -371,33 +371,33 @@ body:hover{
 	overflow:hidden;
 }
 
+.mail_message{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1em;
+	float: right;
+	margin-right: 20%;
+	margin-top: -2.25em;
+	display: none;
+	color:#CC0000;
 
-
-
-#send{
-	width: 10em;
-	bottom: 1em;
-	right:20px;
-	position:absolute;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
 }
 
-#sendbutton {
-	width:100%;
-	height: 100%;
+#message_message{
+	margin-top: -2em;
+}
+
+#send{
+	width: 5em;
+	bottom: 0.5em;
+	right:20px;
+	position:absolute;
 	font-family: 'Limelight', cursive;
 	font-size: 2.5em;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
-	border:none;
-	background-color:rgba(0,0,0,0);
 }
-#sendbutton:hover{
-	cursor:pointer;
-}
+
 #send:hover{
 	right:0px;
 	cursor:pointer;
@@ -417,7 +417,7 @@ body:hover{
 	border-bottom: 1px solid rgba(46,46,46,1);
 	width: 80%;
 	margin-left:1em;
-	margin-bottom:1em;
+	margin-bottom: 1em;
 	height: 2em;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1em;

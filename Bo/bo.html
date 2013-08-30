@@ -56,17 +56,20 @@
 		
 		<div id = "mailpanel" class = "socialpanel">
 			<p id = "mcloser" onclick = "mcloserOnClick()">X<p>
-			<form id = "mailform" action = "mail.php" method = "post">
+			<form id = "mailform">
 				<div id = "frommail">
 					<p id = "from" class = "heading">From:</p>
-					<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
+					<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name" onkeyup = "document.getElementById('name_message').style.display = 'none';"></input></div>
+					<div id ="name_message" class = "mail_message">Please Enter Your Name</div>
 					<div id = "email"><input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail"></input></div>
+					<div id ="mail_message" class = "mail_message">Please Enter a Valid Email</div>
 				</div>
 				<div id = "messagemail">
 					<p id = "message" class = "heading">Message:</p>
-					<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
+					<textarea id = "messageinput" name = "messageinput" type ="text"onkeyup = "document.getElementById('message_message').style.display = 'none';"></textarea>
 				</div>
-				<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
+				<div id ="message_message" class = "mail_message">Please Write a Message</div>
+				<div id = "send" onclick = "sendMail()">Send</div>
 			</form>
 		</div>
 		

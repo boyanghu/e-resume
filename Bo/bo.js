@@ -19,22 +19,61 @@ function unhover(element){
 
 
 function mailOnClick(){
-	document.getElementById("mailpanel").style.visibility = "visible";
+	document.getElementById("mailpanel").style.display = "inline";
 	if(window.innerWidth > 1200)
 		document.getElementById("mailpanel").style.width = "50%";
 	else
 		document.getElementById("mailpanel").style.width = "90%";
-	document.getElementById("mcloser").style.visibility = "visible";
-	document.getElementById("sendbutton").style.visibility = "visible";
 }
 
 function mcloserOnClick(){
-	document.getElementById("sendbutton").style.visibility = "hidden";
-	document.getElementById("mcloser").style.visibility = "hidden";
-	document.getElementById("mailpanel").style.visibility = "hidden";
+	document.getElementById("mailpanel").style.display = "none";
 	document.getElementById("mailpanel").style.width = "0%";
 }
 
+function sendMail(){
+	var mail = document.getElementById("mailform");
+	var name = mail.elements[0].value;
+	if (name == ""){
+		document.getElementById('name_message').style.display = 'inline';
+		return;
+	}
+	var email = mail.elements[1].value;
+	if (!is_email(email)){
+		document.getElementById('mail_message').style.display = 'inline';
+		return;
+	}
+	document.getElementById('mail_message').style.display = 'none';
+	var message = mail.elements[2].value;
+	if (message == ""){
+		document.getElementById('message_message').style.display = 'inline';
+		return;
+	}
+	if (window.XMLHttpRequest)
+	{// initialize a request for modern browsers
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// initialize a request for internet explorer, cuz ie is soooo awesome!
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+	// everything the php script returns a message
+	displayMessage(xmlhttp.responseText);
+	signIn(0);
+    }
+  }
+  
+	// request to run signUp.php with query strings  
+	xmlhttp.open("GET","sendMail.php?name="+ name + "&email=" + email + "&message=" + message,true);
+
+	// excecute the request
+	xmlhttp.send();
+
+}
 
 /*page 2*/
 
@@ -158,4 +197,8 @@ function showexperience(){
 	document.getElementById("resumedis").style.marginTop = "0em";
 
 
+}
+
+function is_email(email){
+	return /^([\w!.%+\-])+@([\w\-])+(?:\.[\w\-]+)+$/.test(email);
 }
