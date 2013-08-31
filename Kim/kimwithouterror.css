@@ -63,6 +63,8 @@ body {
 
 }
 
+/*page1 */
+
 #background{
 	width:100%;
 	height: 100%;
@@ -118,6 +120,7 @@ body {
 
 }
 
+/* secondpage */
 
 #secondpage{
 	width: 100%;
@@ -194,9 +197,6 @@ body {
 	color:#323232;
 	font-size:2em;
 	margin-top:0.5em;
-
-
-
 }
 .menuimg{
 
@@ -251,7 +251,6 @@ body {
 }
 
 
-
 #hobbiespage{
 	background-color:#81bda4;
 	overflow:hidden;
@@ -279,6 +278,7 @@ body {
     -webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
+	
 
 }
 
@@ -293,16 +293,9 @@ body {
 	height:25em;
 	margin-left:20em;
 	font-family: 'Cutive Mono', serif;
-	font-size: 1.4em;
+	font-size: 1.5em;
 	line-height: 1.5em;
 	margin-top:1em;
-}
-.bubblestxt{
-	border:2px solid black;
-	width:15em;
-	font-family: 'Lora', serif;
-	font-size:20px;
-	opacity: 0;
 }
 
 #hobbiestxt{
@@ -312,14 +305,13 @@ body {
 
 }
 
-
 #contactme{
 	background-color:#f6aa93;
-	overflow:hidden;
-	position:fixed;
+	overflow: hidden;
 	top:0;
 	opacity:0;
 	z-index: -2;
+	position:absolute;
 
 }
 #contactcloser{
@@ -345,8 +337,6 @@ body {
 	top:0;
 	opacity:0;
 	z-index: -2;
-	
-
 }
 
 
@@ -375,97 +365,20 @@ body {
 	font-family: 'Cutive Mono', serif;
 	font-size:2.5em;
 	margin-top:0.5em;
-	
-
-}
-
-#topleft{
-	font-family: 'Cutive Mono', serif;
-	margin-top:-10m;
-	margin-left:1em;
-	color:#323232;
-
-	
-}
-
-.imageholder{
-	border-radius:50%;
-	border:2px solid black;
-	background-color:rgba(255,255,255,.5);
-	opacity:0;
-}
-
-#imageholder1{
-	width:11em;
-	height:11em;
-	margin-top:-12em;
-	margin-left:3em;
 
 }
 
 
-
-#imageholder2{
-	width:10em;
-	height:10em;
-	margin-top:2em;
-	margin-left:10em;
-
-}
-
-#imageholder3{
-	width:12em;
-	height:12em;
-	margin-left:14em;
-	margin-top:2em;
-}
-
-#imageholder4{
-	width:10em;
-	height:10em;
-	margin-left:16em;
-	margin-top:-7em;
-
-}
-
-#aboutpic1{
-	width:5em;
-	margin-left:25%;
-	margin-top:25%;
-}
-
-#hobbies{
-	margin-left:8em;
-	margin-top:2em;
-	font-family: 'Special Elite', cursive;
-	font-size:30px;
-}
-#personality{
-	margin-left:7em;
-	margin-top:1em;
-	font-family: 'Special Elite', cursive;
-	font-size:30px;
-}
-#mymajor{
-	margin-left:7em;
-	margin-top:1em;
-	font-family: 'Special Elite', cursive;
-	font-size:30px;
-}
 #mailform{
-	
-	margin-top:1em;
-	margin-left:4em;
 	overflow:hidden;
 }
 
 .input{
 	height:3em;
-	width:30em;
+	width:100%;
 	font-size:1em;
 	background-color:rgba(255,255,255,0.8);
 	
-
 }
 
 .input:focus{
@@ -474,7 +387,7 @@ body {
 }
 #messageinput{
 	height:16em;
-	width:30em;
+	width:100%;
 	font-size:1em;
 	background-color:rgba(255,255,255,0.8);
 	
@@ -488,8 +401,10 @@ body {
 }
 
 #emailme{
-	margin-top:2em;
-	margin-left:1.4em;
+	
+	margin-left:50%;
+	position:relative;
+	left:-4em;
 }
 
 .heading{
@@ -500,52 +415,50 @@ body {
 	margin-top:1.2em;
 }
 
-#contact_line{
-	position: absolute;
-	left:50%;
-	height:25em;
-	width:2px;
-	background-color:#323232;
-	margin-top: -30em;
 
-
-}
-
-#or{
-	position: relative;
-	font-family: 'The Girl Next Door', cursive;
-	font-size:2em;
-	margin-left:50%;
-	left:-0.5em;
-	margin-top: -10em;
-	width:1.5em;
-	height: 1.5em;
-	line-height: 1.5em;
-	background-color: #f6aa93;
-}
 .contacticons{
-	width:10em;
-	height:10em;
+	
 	opacity: 0.8;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
+
+
 }
 .contacticons:hover{
 	opacity:1;
 
-
 }
+
+
 #fbme{
-	margin-left:60em;
-	position:relative;
-	top:-14em;
-	width:12em;
-	height:12em;
+	width:100%;
+	height:100%;
 }
 
 #instame{
-	margin-left:-11em;
+	width:100%;
+	height:100%;
+
+}
+
+#fbmecon{
+	width:6.5em;
+	height:6.5em;
+	
+	position:relative;
+	margin-top:-10em;
+	margin-left:5em;
+}
+
+#instamecon{
+	width:5.5em;
+	height:5.5em;
+	
+	position:relative;
+	margin-top:-6em;
+	margin-left:15em;
+	
 }
 
 #sendbutton{
@@ -557,6 +470,13 @@ body {
 	
 	margin-left:0em;
 	margin-top:1em;
+}
+
+#contactresize{
+	width:50em;
+	margin:auto;
+	margin-top:5em;
+	
 }
 
 
@@ -574,37 +494,11 @@ body {
 #title{
 	font-family: 'Cutive Mono', serif;
 	position: auto;
-	margin-top:3em;
+	margin-top:2em;
 	size:3;
 
 }
 
-
-.bubblestxt{
-	border:2px solid black;
-	width:15em;
-	font-family: 'Lora', serif;
-	font-size:20px;
-	opacity: 0;
-}
-
-#hobbiestxt{
-	margin-top:-28em;
-	margin-left:33em;
-}
-
-#topleft{
-	font-family: 'Cutive Mono', serif;
-	margin-top:-15em;
-	margin-left:1em;
-	color:#323232;
-}
-
-#bottomleft{
-	font-family: 'Cutive Mono', serif;
-	margin-left:1em;
-	margin-top:2em;
-}
 
 #arrowdown{
 	width:100%;
@@ -923,25 +817,12 @@ body {
 	margin-right:5em;
 }
 
-#kimsite{
-	background-image: url("kimsite.png");
-	width:100%;
-	height:100%;
 
-}
-
-#musicstore{
-	background-image: url("musicstore.png");
-	width:100%;
-	height:100%;
-	background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .dpbox{
-	width:40em;
+	width:35em;
 	height:30em;
-	border:2px solid black;
+	
 	margin:auto;
 	position:relative;
 	top:50%;
@@ -972,6 +853,7 @@ body {
 
 #projallegroboxes{
 	margin-top:-19em;
+
 }
 #projandroidboxes{
 	margin-top:-19em;
@@ -1026,11 +908,12 @@ body {
 }
 
 #backgroundabout{
-	width:77em;
-	margin:auto;
+	width:75%;
 	height:80%;
-	margin-top:5%;
-	overflow: auto;
+	margin-left:12.5%;
+	margin-top:10%;
+	position:absolute;
+	overflow:auto;
 	
 }
 
@@ -1057,3 +940,11 @@ body {
 	margin-top: 5%;
 	overflow: auto;
 }
+
+#allegrop1{
+	width:35em;
+	height:30em;
+
+}
+
+

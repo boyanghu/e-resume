@@ -114,7 +114,7 @@
 				<div class = "spacer" ></div>				
 				<div class="menuitem">				
 				<img id="aboutimg" class="menuimg" src = "calculate.svg">				
-				<p id="skillstxt" class="menutxt" >Skills</p>
+				<p id="skillstxt" class="menutxt" >Projects</p>
 			 	</div>
 			</div>
 
@@ -128,10 +128,21 @@
 
 			<div id = "aboutme" class = "sub" >
 					<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')">
+					
 				<div id = "backgroundabout">
+
 					<img id = "backgroundaboutpic" src = "kimmy.jpg">
+
 					<p id = "titleabout"> System.out.println("About Me"); </p>
-					<p id = "welcometxt"> Hi there, welcome to my e-resume! My name is Kimberley Chen, I am a 3rd year undergraduate student at the University of British Columbia majoring in Computer Science and Statistics. My field of interests are data analysis and data mining. Through this e-resume, I can present my resume in a more lively manner and also, for you to get to know me better. </p>
+					<p id = "welcometxt"> Hi there, welcome to my e-resume! My name is Kimberley Chen, and I am a 3rd year undergraduate student at the University of British Columbia majoring in Computer Science and Statistics. My fields of interest are data analysis and data mining. I've been working on this e-resume throughout summer 2013, in hopes of presenting you something that is anything but a boring resume. Please have fun browsing my site! </p>
+					<div id = "icon">
+						<div id = "fbmecon"> <img id = "fbme" class = "contacticons" src = "facebook.svg" onclick = "location.href = 'https://www.facebook.com/kimberleywanchen.chen?'">
+						</div>
+						<div id = "instamecon">
+						<img id = "instame" class = "contacticons" src = "instagram.svg" onclick = "location.href = 'http://instagram.com/kimmiexoxo'">
+						</div>
+					</div>
+				</div>
 				    <div id = "arrowright3">
 						<img id = "arrowright3img" src = "arrow.svg" onclick = "scrollWindow5()">
 					</div>
@@ -146,7 +157,7 @@
 					<div id = "hobby">
 						<div id = "hobbieswords">
 							<div id = "hobbiesline1" > My Hobbies </div>
-							<div id = "hobbiesline2"> I love to try out new recipes and cook food from different cultures. Also, baking is a big passion of mine as I have a second stomach for sweet goods. I own a cute and fluffy peruvian guinea pig named Blondie, and she loves to run around my room. Also, a favorite stress reliving hobby of mine is to practice hot yoga. I embrace the heat and enjoy sweating off my stress and I aspire to get my teacher's certification in the near future.</div>
+							<div id = "hobbiesline2"> I love to try out new recipes and cook food from different cultures. I have a second stomach for sweet goods, so baking is also a big passion of mine. I own a cute and fluffy Peruvian guinea pig named Blondie, and she loves to run around my room. A favorite stress relieving hobby of mine is practicing hot yoga. I embrace the heat and enjoy sweating off my stress and I aspire to get my teacher's certification in the near future.</div>
 						</div>
 						<div id = "hobbiespics">
 							<img id = "hobbiespic1" class = "hobbiespic" src = "1.jpg">
@@ -157,32 +168,40 @@
 					</div>
 
 				</div>
-		</div>
+		
 		
 
 		<div id = "contactme" class = "sub">
 				<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
+				<div id = "contactresize">
 					<p id = "emailme" class = "me"> Send me an Email </p>
 					<form id = "mailform" action = "mail.php" method = "post">
 						<div id = "frommail">
-						<p id = "from" class = "heading">From:</p>
-						<div id = "name"> <input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name"></input></div>
-						<div id = "email"><input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail"></input></div>
+							<p id = "from" class = "heading">From:</p>
+							<div id = "name"> 
+								<input id = "nameinput" name = "nameinput" class = "input" type ="text" placeholder = "Your Name">
+								</input>
+							</div>
+							<div id = "email">
+								<input id = "emailinput" name = "emailinput" class = "input" type ="text" placeholder = "Your E-mail">
+								</input>
+							</div>
 						</div>
-					<div id = "messagemail">
-						<p id = "message" class = "heading">Message:</p>
-						<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
-					</div>
-					<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" /></div>
+						<div id = "messagemail">
+							<p id = "message" class = "heading">Message:</p>
+							<textarea id = "messageinput" name = "messageinput" type ="text"></textarea>
+						</div>
+						<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" >
+							</input>
+						</div>
+					
 					</form>
-					<div id = 'contact_line'></div>
-						<p id = "or"> OR </p>
-					<div id = "icons">
-						<img id = "fbme" class = "contacticons" src = "facebook.svg" onclick = "location.href = 'https://www.facebook.com/kimberleywanchen.chen?'">
-						<img id = "instame" class = "contacticons" src = "instagram.svg" onclick = "location.href = 'http://instagram.com/kimmiexoxo'">
-					</div>
+				
+			</div>
+	</div>
 
-		</div>
+	
+
 		<div id = "skillsme" class = "sub">
 			<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skillsme')"> 
 					<div id = "arrowright">
@@ -204,7 +223,10 @@
 					<div id = "arrowrighttwo">
 						<img id = "arrowrighttwoimg" src = "arrow.svg" onclick = "scrollWindow3()">
 					</div>
-					<div id = "projallegroboxes" class="dpbox"> </div> 
+					<div id = "projallegroboxes" class="dpbox"> 
+						<div id = "allegropage1"> <img id = "allegrop1" src = "allegrop1new.jpg"></div>
+						<div id = "allegropage2"> <img id = "allegrop2" src = "allegrop2.jpg"></div>
+					</div> 
 					<div id = "allegronextcircle" class="projcircles"> Next </div>
 					<div id = "allegrobackcircle" class="projcircles"> Back </div>
 				</div>
