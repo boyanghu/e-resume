@@ -7,12 +7,26 @@
 		<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
 
 
-<link href='http://fonts.googleapis.com/css?family=Arapey' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arapey' rel='stylesheet' type='text/css'>
 		<title>Kimberley Chen</title>
 		<!--favicon-->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 		<!-- CSS Files -->
 		<link type="text/css" rel="stylesheet" href="kimwithouterror.css">
+
+		<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+
+		<script type="text/javascript" >
+		$(document).ready(function(){
+    	$('#projallegroboxes img:gt(0)').hide();
+    	setInterval(function(){
+      	$('#projallegroboxes :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('#projallegroboxes');}, 
+      		3000);
+		});
+		</script>
 
 		<script>
 			function menuopen(element){
@@ -208,27 +222,40 @@
 						<img class = "arrowrightimg" src = "arrow.svg" onclick = "scrollWindow()">
 					</div>
 					<div id = "projkimboxes" class="dpbox"> </div> 
-					<div id = "kimnextcircle" class="projcircles"> Next </div>
-					<div id = "kimbackcircle" class="projcircles"> Back </div>
+					
 
 
 				<div id = "projkim">
 					<p id ="projkimtxt"> Kim's e-resume</p>
 				</div>
 				<div id = "projallegro">
-					<p id ="projallegrotxt"> Allegro Music Store </p>
+			
 					<div id = "arrowleft">
 						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow2()">
 					</div>
 					<div id = "arrowrighttwo">
 						<img id = "arrowrighttwoimg" src = "arrow.svg" onclick = "scrollWindow3()">
 					</div>
+				<div id = "projallegroresize">
 					<div id = "projallegroboxes" class="dpbox"> 
-						<div id = "allegropage1"> <img id = "allegrop1" src = "allegrop1new.jpg"></div>
-						<div id = "allegropage2"> <img id = "allegrop2" src = "allegrop2.jpg"></div>
+						<img id = "allegrop1" src = "allegrop1.jpg">
+						<img id = "allegrop2" src = "allegrop2.jpg">
+						<img id = "allegrop3" src = "allegrop3.jpg">
+						<img id = "allegrop4" src = "allegrop4.jpg">
+						<img id = "allegrop4.2" src = "allegrop4.2.jpg">
+						<img id = "allegrop5" src = "allegrop5.jpg">
+						<img id = "allegrop6" src = "allegrop6.jpg">
+						<img id = "allegrop7" src = "allegrop7.jpg">
+						<img id = "allegrop8" src = "allegrop8.jpg">
+						<img id = "allegrop9" src = "allegrop9.jpg">
+
 					</div> 
-					<div id = "allegronextcircle" class="projcircles"> Next </div>
-					<div id = "allegrobackcircle" class="projcircles"> Back </div>
+					<div id = "projallegroboxestxt">
+						<img id = "allegrop" src = "allegromusicstore.jpg">
+						<img id = "linkbox" src = "linkcrop.jpg" onclick = "location.href = 'http://kimandbo.com/Allegro/'" >
+					</div>
+				</div>
+					
 				</div>
 				<div id = "projandroid">
 					<p id = "projandroidtxt"> UBC WayFinder Android Application </p>
@@ -236,8 +263,7 @@
 						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow4()">
 					</div>
 					<div id = "projandroidboxes" class="dpbox"> </div> 
-					<div id = "androidnextcircle" class="projcircles"> Next </div>
-					<div id = "androidbackcircle" class="projcircles"> Back </div>
+					
 				</div>					
 
 		</div>

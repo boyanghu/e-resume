@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<link type="text/css" rel="stylesheet" href="tester.css">
+
+	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
+
+<script type="text/javascript" >
+		$(document).ready(function(){
+    	$('.fadein img:gt(0)').hide();
+    	setInterval(function(){
+      	$('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');}, 
+      3000);
+		});
+</script>
+</head>
+
+<body>
+
+<<div class="fadein">
+  						<img id = "allegrop1" src = "allegrop1.jpg">
+						<img id = "allegrop2" src = "allegrop2.jpg">
+						<img id = "allegrop2" src = "allegrop3.jpg">
+						<img id = "allegrop2" src = "allegrop4.jpg">
+						<img id = "allegrop2" src = "allegrop4.2.jpg">
+						<img id = "allegrop2" src = "allegrop5.jpg">
+						<img id = "allegrop2" src = "allegrop6.jpg">
+						<img id = "allegrop2" src = "allegrop7.jpg">
+						<img id = "allegrop2" src = "allegrop8.jpg">
+						<img id = "allegrop2" src = "allegrop9.jpg">
+						<img id = "allegrop2" src = "allegrop10.jpg">
+</div>
+
+</body>
+
+</html>
