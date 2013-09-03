@@ -12,7 +12,7 @@
 		<!--favicon-->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 		<!-- CSS Files -->
-		<link type="text/css" rel="stylesheet" href="kimwithouterror.css">
+		<link type="text/css" rel="stylesheet" href="kim.css">
 
 		<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 
@@ -27,6 +27,30 @@
       		3000);
 		});
 		</script>
+
+
+		<script type="text/javascript" >
+		$(document).ready(function(){
+    	$('#projkimboxes img:gt(0)').hide();
+    	setInterval(function(){
+      	$('#projkimboxes :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('#projkimboxes');}, 
+      		4000);
+		});
+		</script>
+
+		<script type="text/javascript" >
+		$(document).ready(function(){
+    	$('#projandroidboxes img:gt(0)').hide();
+    	setInterval(function(){
+      	$('#projandroidboxes :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('#projandroidboxes');}, 
+      		4000);
+		});
+		</script>
+
 
 		<script>
 			function menuopen(element){
@@ -51,9 +75,9 @@
 				document.getElementById(var4).style.zIndex = "10";
 
 			}
-			
-			
-			
+
+
+
 
 			function scrollWindow()
 			{
@@ -88,7 +112,7 @@
 				document.getElementById('backgroundabout').style.display='inline';
 				document.getElementById('hobbiespage').style.marginLeft='100%';
 			}
-			
+
 
 		</script>
 
@@ -142,7 +166,7 @@
 
 			<div id = "aboutme" class = "sub" >
 					<img id = "aboutcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('aboutme')">
-					
+
 				<div id = "backgroundabout">
 
 					<img id = "backgroundaboutpic" src = "kimmy.jpg">
@@ -162,8 +186,8 @@
 					</div>
 
 				</div>
-				
-			
+
+
 				<div id = "hobbiespage">
 					<div id = "arrowleft3">
 						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow6()">
@@ -182,8 +206,8 @@
 					</div>
 
 				</div>
-		
-		
+
+
 
 		<div id = "contactme" class = "sub">
 				<img id = "contactcloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('contactme')"> 
@@ -208,28 +232,41 @@
 						<div id = "send" ><input type = "submit" id = "sendbutton" value = "SEND" >
 							</input>
 						</div>
-					
+
 					</form>
-				
+
 			</div>
 	</div>
 
-	
+
 
 		<div id = "skillsme" class = "sub">
 			<img id = "skillscloser" class = "subcloser" src = "cancel.svg" onclick = "menuclose('skillsme')"> 
 					<div id = "arrowright">
 						<img class = "arrowrightimg" src = "arrow.svg" onclick = "scrollWindow()">
 					</div>
-					<div id = "projkimboxes" class="dpbox"> </div> 
-					
+					<div id = "projkimresize">
+					<div id = "projkimboxes" class="dpbox"> 
+						<img id = "kimp1" src = "kimp1.jpg">
+						<img id = "kimp2.2" src = "kimp2.2.jpg">
+						<img id = "kimp3" src = "kimp3.jpg">
+						<img id = "kimp4" src = "kimp4.jpg">
+						<img id = "kimp5" src = "kimp5.jpg">
+					</div> 
+					<div id = "projkimboxestxt">
+						<img id = "kimp" src = "eresumedescription.jpg">
+						
+					</div>
+				</div>
+
 
 
 				<div id = "projkim">
-					<p id ="projkimtxt"> Kim's e-resume</p>
+
+					
 				</div>
 				<div id = "projallegro">
-			
+
 					<div id = "arrowleft">
 						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow2()">
 					</div>
@@ -255,14 +292,25 @@
 						<img id = "linkbox" src = "linkcrop.jpg" onclick = "location.href = 'http://kimandbo.com/Allegro/'" >
 					</div>
 				</div>
-					
+
 				</div>
 				<div id = "projandroid">
-					<p id = "projandroidtxt"> UBC WayFinder Android Application </p>
 					<div id = "arrowlefttwo">
 						<img id = "arrowleftimg" src = "arrowleft.svg" onclick = "scrollWindow4()">
 					</div>
-					<div id = "projandroidboxes" class="dpbox"> </div> 
+					<div id = "projandroidresize">
+					<div id = "projandroidboxes" class="dpbox"> 
+						<img id = "androidp1" src = "androidp1.jpg">
+						<img id = "androidp2" src = "androidp2.jpg">
+						<img id = "androidp3" src = "androidp3.jpg">
+						<img id = "androidp4" src = "androidp4.jpg">
+						
+					</div> 
+					<div id = "projandroidboxestxt">
+						<img id = "androidp" src = "androiddescription.jpg">
+						
+					</div>
+				</div>					
 					
 				</div>					
 
